@@ -122,3 +122,115 @@ switch(day){
         console.log("That is not a day of the week");
         break;
 }
+
+//For Loop
+for(var i = 0; i <= 5; i++) {
+    console.log("Hello");
+}
+
+// New Code
+var i = 3;
+var j = 5;
+
+if(i == 3 && j < 5) {
+    console.log("Hello");
+} else {
+    console.log("Goodbye");
+}
+
+var i = 7;
+var j = 2;
+
+if(i < 7 || j < 5) {
+    console.log("Hello");
+} else {
+    console.log("Goodbye");
+}
+
+//For loop
+for(var i = 1; i<6; i++){
+    console.log(i)
+}
+console.log('Counting completed!')
+
+//Cube Length
+var cubes = 'ABCDEFG';
+
+for (var i = 0; i < 7; i++) {
+    var styles = "font-size: 40px; border-radius: 10px; border: 1px solid blue; background: pink; color: purple";
+    console.log("%c" + cubes[i], styles)
+}
+
+
+function reverseString(str) {
+    // Step 1. Create an empty string that will host the new created string
+    var newString = "";
+
+    // Step 2. Create the FOR loop
+    /* The starting point of the loop will be (str.length - 1) which corresponds to the
+       last character of the string, "o"
+       As long as i is greater than or equals 0, the loop will go on
+       We decrement i after each iteration */
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i]; // or newString = newString + str[i];
+    }
+    /* Here hello's length equals 5
+        For each iteration: i = str.length - 1 and newString = newString + str[i]
+        First iteration:    i = 5 - 1 = 4,         newString = "" + "o" = "o"
+        Second iteration:   i = 4 - 1 = 3,         newString = "o" + "l" = "ol"
+        Third iteration:    i = 3 - 1 = 2,         newString = "ol" + "l" = "oll"
+        Fourth iteration:   i = 2 - 1 = 1,         newString = "oll" + "e" = "olle"
+        Fifth iteration:    i = 1 - 1 = 0,         newString = "olle" + "h" = "olleh"
+    End of the FOR Loop*/
+
+    // Step 3. Return the reversed string
+    return newString; // "olleh"
+}
+
+reverseString('hello');
+
+//Another For Loop with if/else
+for(var i = 1; i <= 10; i++){
+    if (i==1){
+        console.log("Gold Medal")
+    }else if(i==2){
+        console.log("Silver Medal")
+    }else if(i==3){
+        console.log("Bronze Medal")
+    }else{
+        console.log(i)
+    }
+}
+
+//Another For Loop with switch
+for(var i = 1; i <= 10; i++) {
+    switch (i) {
+        case(1):
+            console.log("Gold Medal");
+            break;
+        case(2):
+            console.log("Silver Medal");
+            break;
+        case(3):
+            console.log("Bronze Medal");
+            break;
+        default:
+            console.log(i);
+            break;
+    }
+}
+
+//Letter Finder
+function letterFinder(word,match){
+    for(var i=0; i < word.length; i++){
+        if(word[i]==match){
+            console.log("Found the", match, "at", i)
+        }else{
+            console.log("---No match found at ", i)
+        }
+    }
+}
+
+letterFinder("test", "t");
+
+//Object Literals and the Dot notation
