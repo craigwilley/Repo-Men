@@ -220,6 +220,20 @@ for(var i = 1; i <= 10; i++) {
     }
 }
 
+//Palindrome
+var forward = "toot";
+var backward = "";
+
+for(var i = forward.length-1; i>=0; i--){
+    backward += forward[i];
+}
+
+if(forward==backward){
+    console.log("Yes, it is a palindrome")
+}else{console.log("No, it is not a palindrome")};
+
+
+
 //Letter Finder
 function letterFinder(word,match){
     for(var i=0; i < word.length; i++){
@@ -233,4 +247,19 @@ function letterFinder(word,match){
 
 letterFinder("test", "t");
 
-//Object Literals and the Dot notation
+
+//reverse string
+var str = "Hello this is a new string";
+var reverse = "";
+ for(var i = str.length-1;i>=0;i--){
+  reverse += str[i];}
+console.log(reverse);
+
+//Math Random Examples
+Math.random();
+var decimal = Math.random();
+console.log(decimal);
+console.log(decimal*10);
+
+
+
