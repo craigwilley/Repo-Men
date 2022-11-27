@@ -261,5 +261,60 @@ var decimal = Math.random();
 console.log(decimal);
 console.log(decimal*10);
 
+//For loop over arrays
+var letters = ["a", "b", "c"];
+for(var i=0; i<letters.length; i++){
+    console.log(letters[i]);
+}
 
+//For loop over strings
+var letters = "abc";
+for(var i=0; i<letters.length; i++){
+    console.log(letters[i]);
+}
+
+// Iterable Arrays
+var veggies = ["onion", "parsley", "carrot"];
+console.log(veggies.length);
+
+console.log(veggies[0]);
+console.log(veggies[1]);
+
+for(var i=0; i < veggies.length; i++){
+    console.log(veggies[i]);
+}
+
+// Iterable Strings
+
+var greeting = "Howdy";
+console.log(greeting.length);
+console.log(greeting[0]);
+console.log(greeting[1]);
+for(var i = 0; i < greeting.length; i++){
+    console.log(greeting[i]);
+}
+
+// Strings are not the same as arrays
+var greet = "Hello ";
+var user = "Lisa";
+
+//console.log(greet.pop()); //DOES NOT WORK String and arrays are different
+
+console.log(greet + user);
+console.log(greet.concat(user));
+
+// Objects and Array Practice
+var clothes =[];
+clothes.push("Shirt", "Hat", "Pants", "Belt", "Socks");
+console.log(clothes);
+clothes.pop(4);
+console.log(clothes);
+console.log(clothes[2]);
+
+const favCar = {
+    color: "Blue",
+    convertible: false,
+};
+favCar.mileage=66565; //Update with dot notation
+console.log(favCar);
 
