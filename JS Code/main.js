@@ -5,8 +5,8 @@ var num1 = 2;
 var num2 = 5;
 var test1 = num1 %2;
 var test2 = num2 %2;
-var result1 = test1 == 0;
-var result2 = test2 == 0;
+var result1 = test1 === 0;
+var result2 = test2 === 0;
 
 console.log("Is", num1, "an even number ?", result1);
 console.log("Is", num2, "an even number ?",result2);
@@ -318,3 +318,164 @@ const favCar = {
 favCar.mileage=66565; //Update with dot notation
 console.log(favCar);
 
+// Type of examples
+// var test = typeof("what is this");
+// var test = typeof(10);
+// var test = typeof(3.14);
+// var test = typeof(true);
+//var test = typeof(false);
+// var test = typeof(1 < 2);
+// var test = typeof([1,2,3]);
+// var test = typeof({firstProperty: 1});
+var test = typeof(function abc(){console.log("abc");});
+console.log(test)
+
+
+var dog = {
+    color: "brown",
+    height: 30,
+    length: 60
+};
+dog["type"] = "corgi";
+
+console.log(dog);
+
+//Error Prevention exercise
+function addTwoNums(a,b) {
+    try {
+        if(typeof(a) != "number") {
+            throw new ReferenceError("The First argument is not a number.")
+        }else if(typeof(b) != "number"){
+            throw new ReferenceError("The Second argument is not a number")
+        }else{
+            console.log(a+b);
+        }
+    } catch (err) {
+        console.log("Error!", err)
+    }
+}
+addTwoNums("5", 5);
+console.log("It Still Works")
+
+//Defensive Programming
+function letterFinder(word, match) {
+    var condition1 = typeof(word) == 'string' && word.length >= 2;
+    var condition2 = typeof(match) == 'string' && match.length == 1;
+    if(condition1 && condition2) {
+        for(var i = 0; i < word.length; i++) {
+            if(word[i] == match) {
+                console.log('Found the', match, 'at', i)
+            } else {
+                console.log('---No match found at', i)
+            }
+        }
+    } else {
+        console.log("Please pass correct arguments to the function")
+    }
+}
+letterFinder("cat", "c");
+
+//Building Blocks
+try {
+    Number(5).toPrecision(300)
+} catch(e) {
+    console.log("There was an error")
+}
+
+//Functional Programming
+var currencyOne=100;
+var currencyTwo=0;
+var exchangeRate=1.2;
+
+function convertCurrency(amount, rate){
+    return amount * rate;
+}
+
+currencyTwo = convertCurrency(currencyOne, exchangeRate);
+
+console.log(currencyTwo);
+
+// Functional Programing 2
+var globalVar = 77;
+
+function scopeTest() {
+    var localVar = 88;
+}
+
+//console.log(localVar);
+
+//Functional Programing 3
+function meal(animal) {
+    animal.food = animal.food + 10;
+}
+
+var dog = {
+    food: 10
+};
+meal(dog);
+meal(dog);
+
+console.log(dog.food);
+
+//Functional Programming 4
+
+function two() {
+    return 2;
+}
+
+function one() {
+    return 1;
+}
+
+function calculate(initialValue, incrementValue) {
+    return initialValue() + incrementValue() + incrementValue();
+}
+
+console.log(calculate(two, one));
+
+//OOP Introduction
+var purchase1 = {
+    shoes: 100,
+    stateTax: 1.2,
+    totalPrice: function(){
+        var calculation = purchase1.shoes * purchase1.stateTax;
+        console.log("Total Price: ", calculation);
+    }
+}
+
+purchase1.totalPrice();
+purchase1.shoes = 200;
+purchase1.totalPrice();
+
+var purchase2 = {
+    shoes:50,
+    stateTax: 1.2,
+    totalPrice: function() {
+        var calculation = purchase2.shoes * purchase2.stateTax;
+        console.log("Total price: ", calculation)
+    }
+}
+
+purchase2.totalPrice();
+
+//Using the "This" Object
+var purchase1 = {
+    shoes: 100,
+    stateTax: 1.2,
+    totalPrice:  function() {
+        var calculation = this.shoes * this.stateTax;
+        console.log("Total Price: ", calculation)
+    }
+}
+
+//Functional Programming shoes example.
+
+var shoes = 100;
+var stateTax = 1.2;
+
+function totalPrice(shoes,tax){
+    return shoes * tax;
+}
+
+var toPay = totalPrice(shoes, stateTax);
+console.log("Total Price: " + toPay);
