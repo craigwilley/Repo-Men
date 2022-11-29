@@ -479,3 +479,66 @@ function totalPrice(shoes,tax){
 
 var toPay = totalPrice(shoes, stateTax);
 console.log("Total Price: " + toPay);
+
+//OOP
+var purchase1={
+    shoes: 100,
+    stateTax: 1.2,
+    totalPrice: function(){
+        var calculation = purchase1.shoes * purchase1.stateTax;
+        console.log("Total Price: ", calculation);
+    }
+}
+purchase1.totalPrice();
+
+//OOP 2
+var purchase2 = {
+    shoes:50,
+    stateTax: 1.2,
+    totalPrice: function(){
+        var calculation = purchase2.shoes * purchase2.stateTax;
+        console.log("Total Price: ", calculation);
+    }
+}
+purchase2.totalPrice();
+
+//OOP 3: this
+var purchase1 ={
+    shoes: 100,
+    stateTax: 1.2,
+    totalPrice: function(){
+        var calculation = this.shoes * this.stateTax;
+        console.log("Total Price: ", calculation);
+    }
+}
+purchase1.totalPrice();
+
+var purchase2 = {
+    shoes:50,
+    stateTax: 1.2,
+    totalPrice: function(){
+        var calculation = this.shoes * this.stateTax;
+        console.log("Total Price: ", calculation);
+    }
+}
+purchase2.totalPrice();
+
+//Classes
+class Car {
+    constructor(color, speed) {
+        this.color = color;
+        this.speed = speed;
+    }
+//The Turbo On is a method inside of the class
+    turboOn(){
+        console.log("The Turbo is ON!")
+    }
+}
+const car1 = new Car("red", 120);
+car1.turboOn();
+
+//OOP Principles
+class Animal {/* ...class code goes here...*/}
+var myDog = Object.create(Animal)
+console.log(Animal)
+
