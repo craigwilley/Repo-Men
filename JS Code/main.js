@@ -542,3 +542,115 @@ class Animal {/* ...class code goes here...*/}
 var myDog = Object.create(Animal)
 console.log(Animal)
 
+// Class Inheritance (taking properties from the Super-Class)
+class Animals {/*...class code goes here...*/}
+class Bird extends Animals{/*...class code goes here...*/}
+class Eagle extends Bird {/*...class code goes here...*/}
+
+//Encapsulation (Hiding the code that doesn't matter)
+let characters = "abc";
+characters = characters.toUpperCase();
+console.log(characters);
+
+//Polymorphism
+const bicycle = {
+    bell: function(){
+        return "Ring, Ring! Watch your butt"
+    }
+}
+const door = {
+    bell: function(){
+        return "Ring, Ring! Let me in sucka"
+    }
+}
+
+bicycle.bell();
+door.bell();
+
+function ringTheBell(thing) {
+    console.log(thing.bell())
+}
+
+ringTheBell(bicycle);
+ringTheBell(door);
+
+// Example of Polymorphism in classes
+class Birds {
+    useWings() {
+        console.log("Flying!")
+    }
+}
+class Eagles extends Birds {
+    useWings() {
+        super.useWings()
+        console.log("Barely flapping!")
+    }
+}
+class Penguins extends Birds {
+    useWings() {
+        console.log("Diving!")
+    }
+}
+var baldEagle = new Eagles();
+var kingPenguin = new Penguins();
+baldEagle.useWings();
+kingPenguin.useWings();
+
+//Constructors
+console.log(Math.pow(2,5));
+console.log(new Date());
+
+function Icecream(flavor) {
+    this.flavor = flavor;
+    this.meltIt = function() {
+        console.log(`The ${this.flavor} icecream has melted`);
+    }
+}
+let kiwiIcecream = new Icecream("kiwi");
+let appleIcecream = new Icecream("apple");
+console.log(kiwiIcecream);
+console.log(appleIcecream);
+
+let apple = new String("apple");
+console.log(apple);
+
+let pear = "pear";
+console.log(pear);
+
+//Regular Expressions
+new RegExp;
+console.log("abcd".match(/d/));
+console.log("abcd".match(/a/));
+
+//Inheritance
+var bird = {
+    hasWings: true,
+    canFly: true,
+    hasFeathers: true
+}
+
+var eagle1 = Object.create(bird);
+console.log("eagle1: ", eagle1);
+
+console.log("eagle1 has wings: ", eagle1.hasWings);
+console.log("eagle1 can fly: ", eagle1.canFly);
+console.log("eagle1 has feathers: ", eagle1.hasFeathers);
+
+var eagle2 = Object.create(bird);
+console.log("eagle2 has wings: ", eagle2.hasWings);
+
+var penguin1 = Object.create(bird);
+penguin1.canFly=false;
+console.log("penguin1 can fly: ", penguin1.canFly);
+
+// Can I still print a name backwards
+// Yes I can BOOM
+var forwardString = "Hello";
+var backwardString = "";
+
+for(var i = forwardString.length-1; i>0;i--){
+    backwardString += forwardString[i]
+}
+console.log(backwardString);
+
+
