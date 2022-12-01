@@ -653,4 +653,6 @@ for(var i = forwardString.length-1; i>0;i--){
 }
 console.log(backwardString);
 
+//I am going to end this file here and make a new .JS file that has the content sorted by weeks of the meta course.
+
 

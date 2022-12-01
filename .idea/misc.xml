@@ -3,5 +3,8 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="FLOW" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (Repo-Men)" project-jdk-type="Python SDK" />
 </project>
