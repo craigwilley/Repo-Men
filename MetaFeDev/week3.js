@@ -344,3 +344,88 @@ class Friend extends Person1 {
 
 var result = new Friend();
 result.sayHello();
+
+//For loops and object
+var clothingItem = {
+    price: 50,
+    color: 'beige',
+    material: 'cotton',
+    season: 'autumn'
+}
+
+for( key of Object.keys(clothingItem) ) {
+    console.log(key, ":", clothingItem[key])
+}
+
+//Dynamic Access
+function testBracketsDynamicAccess() {
+    var dynamicKey = Math.random() > 0.5 ? "speed" : "color";
+
+    var drone = {
+        speed: 15,
+        color: "orange"
+    }
+
+    console.log(drone[dynamicKey]);
+}
+testBracketsDynamicAccess();
+
+//For of loops and objects
+const car1 ={
+    engine: true,
+    steering: true,
+    speed: "slow"
+}
+const sportsCar1 = Object.create(car1);
+sportsCar1.speed = "fast";
+console. log ("The sportsCar object: ", sportsCar1);
+
+console.log('----- for-in is unreliable -----');
+    for (prop in sportsCar1) {
+    console.log(prop);
+    }
+    console.log("Iterating over object AND its prototype!");
+    console.log('----- for-of is reliable -----');
+    for (prop of Object.keys(sportsCar1)) {
+        console.log(prop + ": " + sportsCar1 [prop]);
+    }
+        console.log("Iterating over object's OWN PROPERTIES only!");
+// For loops and objects no comments
+const car = {
+    engine: true
+}
+    const sportsCar = Object.create(car);
+    sportsCar.speed = "fast";
+    console.log("The sportsCar object: ", sportsCar);
+    for (prop in sportsCar){
+    console.log(prop);
+}
+for (prop of Object.keys(sportsCar)) {
+    console.log(prop + ": " + sportsCar[prop]);
+}
+
+//variable interpolation
+let greet = "Hello";
+let place = "World";
+console.log(`${greet} ${place} !`)
+console.log(`${1 + 1 + 1 + 1 + 1} stars!`)
+
+//multi-line template literals
+let multiline = `
+Using 
+backticks,
+allows
+for
+multi-line
+strings!
+`;
+console.log(multiline);
+
+//Template Literals Variables
+let first = `He said, "Don't you know? Backticks, allow for cool features!`;
+let second = `"Wouldn't you like to learn more ?", he asked.`;
+console.log(`${first} 
+- and I get curious. 
+${second}`);
+
+//Iterate over an array
