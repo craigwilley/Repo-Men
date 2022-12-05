@@ -427,7 +427,7 @@ let second = `"Wouldn't you like to learn more ?", he asked.`;
 console.log(`${first} 
 - and I get curious. 
 ${second}`);
-*/
+
 //Iterate over an array
 var dairy = [
     'cheese',
@@ -560,4 +560,27 @@ function showItinerary(place1, place2, place3, place4, place5, place6, place7) {
 }
 
 showItinerary(...top7);
+*/
 
+// Rest Operator
+const top7 = [
+    "The Colosseum",
+    "The Roman Forum",
+    "The Vatican",
+    "Trevi Fountain",
+    "The Pantheon",
+    "Piazza Venezia",
+    "The Palatine Hill"
+]
+
+const[] = top7;
+const [first, second, third, ...secondVisit] = top7;
+console.log(secondVisit);
+
+//Rest Operator in Functions
+
+function addTaxToPrices(taxRate, ...itemsBought){
+    return itemsBought.map(item => taxRate * item)
+}
+let shoppingCart = addTaxToPrices(1.1,46, 89, 35, 79);
+console.log(shoppingCart);
