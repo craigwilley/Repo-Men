@@ -13,9 +13,11 @@ import styled from "styled-components"
                     <LeftButton>
                         {leftBtnText}
                     </LeftButton>
-                    <RightButton>
-                        {rightBtnText}
-                    </RightButton>
+                    {rightBtnText &&
+                        <RightButton>
+                            {rightBtnText}
+                        </RightButton>
+                    }
                 </ButtonGroup>
                 <DownArrow src="/images/down-arrow.svg"/>
             </Buttons>
@@ -58,7 +60,7 @@ const LeftButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100px;
+  border-radius: 5px;
   opacity: 0.85;
   text-transform: uppercase;
   font-size: 12px;
