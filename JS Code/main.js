@@ -644,15 +644,24 @@ penguin1.canFly=false;
 console.log("penguin1 can fly: ", penguin1.canFly);
 
 // Can I still print a name backwards
-// Yes I can BOOM
-var forwardString = "Hello";
-var backwardString = "";
+//
+// let forwardString = "Hello";
+// let backwardString = "";
+//
+// for(var i = forwardString.length-1; i>0;i--){
+//     backwardString += forwardString[i]
+// }
+// console.log(backwardString);
 
-for(var i = forwardString.length-1; i>0;i--){
-    backwardString += forwardString[i]
+// String again
+
+var forwardString = `Steve`
+var backwardString = ``
+
+for(i = forwardString.length-1; i>=0;i--){
+    backwardString += forwardString[i];
 }
-console.log(backwardString);
 
-//I am going to end this file here and make a new .CompleteJS file that has the content sorted by weeks of the meta course.
+console.log(backwardString)
 
 
