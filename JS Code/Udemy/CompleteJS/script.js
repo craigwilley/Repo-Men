@@ -54,10 +54,82 @@ console.log(year);
 console.log(typeof year);
 
 console.log(typeof null);
-*/
+
 
 let age = 30;
 age = 31;
 
 const birthYear=1991;
 
+var job = `programmer`;
+job = `teacher`
+
+lastName=`Barnes`;
+console.log(lastName);
+
+year=2037;
+const ageJane = year - 1991;
+console.log(ageJane);
+
+const ageBob = year-2018;
+console.log(ageBob*2, ageJane/10, 2**3);
+
+let x = 10 + 5
+x += 10
+x *= 4
+x++
+x--
+x--
+console.log(x)
+
+//Comparison Operators
+console.log(12 >= 2);
+
+
+//coding challenge 1
+
+let p1Weight = 78;
+let p1Height = 1.69;
+let p2Weight = 92;
+let p2Height = 1.95;
+
+let BMI1 = p1Weight / (p1Height ** 2);
+console.log (BMI1);
+
+let BMI2 = p2Weight / (p2Height ** 2);
+console.log (BMI2);
+
+if(BMI1 > BMI2){
+    console.log(`Mark has the higher BMI`)
+}else {
+    console.log(`Mark has the lower BMI`)
+}
+
+
+let firstName = `Harry`
+let job = `Banker`
+const birthYear = 1991
+let curYear = 2022
+
+var message = `I'm ${firstName}, \nI am ${curYear - birthYear} years old. \nA ${job} by trade. `
+console.log(message)
+
+var message2 = `I'm ${firstName}, 
+I am ${curYear - birthYear} years old. 
+A ${job} by trade. `
+console.log(message2)
+*/
+
+// Run the following command from NPM
+//"npm install prompt-sync"
+const prompt=require("prompt-sync")({sigint:true});
+/*const driveAge = 16
+const age = prompt(`Please enter your age `)
+const isOldEnough = age >= 16
+
+if(isOldEnough){
+    console.log(`You are old enough to drive.`)
+}else{
+    console.log(`You are not old enough to drive. You still have ${driveAge - age} left before you can drive.`)
+}
+*/
