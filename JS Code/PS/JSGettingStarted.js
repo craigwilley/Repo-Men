@@ -56,3 +56,6 @@ function incrementAge(person){
 incrementAge(person);
 */
 
+let dateNow = new Date();
+console.log(dateNow.toDateString() );
+
