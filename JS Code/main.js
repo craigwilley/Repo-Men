@@ -1,6 +1,6 @@
 //Main.js is for java script code.
 
-
+/*
 var num1 = 2;
 var num2 = 5;
 var test1 = num1 %2;
@@ -171,9 +171,9 @@ function reverseString(str) {
        last character of the string, "o"
        As long as i is greater than or equals 0, the loop will go on
        We decrement i after each iteration */
-    for (var i = str.length - 1; i >= 0; i--) {
-        newString += str[i]; // or newString = newString + str[i];
-    }
+//    for (var i = str.length - 1; i >= 0; i--) {
+  //      newString += str[i]; // or newString = newString + str[i];
+   // }
     /* Here hello's length equals 5
         For each iteration: i = str.length - 1 and newString = newString + str[i]
         First iteration:    i = 5 - 1 = 4,         newString = "" + "o" = "o"
@@ -181,7 +181,7 @@ function reverseString(str) {
         Third iteration:    i = 3 - 1 = 2,         newString = "ol" + "l" = "oll"
         Fourth iteration:   i = 2 - 1 = 1,         newString = "oll" + "e" = "olle"
         Fifth iteration:    i = 1 - 1 = 0,         newString = "olle" + "h" = "olleh"
-    End of the FOR Loop*/
+    End of the FOR Loop
 
     // Step 3. Return the reversed string
     return newString; // "olleh"
@@ -538,14 +538,14 @@ const car1 = new Car("red", 120);
 car1.turboOn();
 
 //OOP Principles
-class Animal {/* ...class code goes here...*/}
+class Animal {}
 var myDog = Object.create(Animal)
 console.log(Animal)
 
 // Class Inheritance (taking properties from the Super-Class)
-class Animals {/*...class code goes here...*/}
-class Bird extends Animals{/*...class code goes here...*/}
-class Eagle extends Bird {/*...class code goes here...*/}
+class Animals {}
+class Bird extends Animals{}
+class Eagle extends Bird {}
 
 //Encapsulation (Hiding the code that doesn't matter)
 let characters = "abc";
@@ -652,16 +652,14 @@ console.log("penguin1 can fly: ", penguin1.canFly);
 //     backwardString += forwardString[i]
 // }
 // console.log(backwardString);
-
+*/
 // String again
 
-var forwardString = `Steve`
-var backwardString = ``
+let forwardString = `steve`;
+let backwardString = ``;
 
-for(i = forwardString.length-1; i>=0;i--){
-    backwardString += forwardString[i];
+for(var i = forwardString.length-1; i>0; i--){
+    backwardString += forwardString[i]
 }
-
-console.log(backwardString)
-
+console.log(backwardString);
 
