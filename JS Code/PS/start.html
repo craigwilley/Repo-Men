@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en-us">
+        <head>
+            <title>Switch Statement Examples</title>
+        </head>
+        <body>
+            <button onclick="simpleSwitch();">Simple Switch Sample</button> <br/>
+            <button onclick="multipleCase();">Multiple Case Statement</button> <br/>
+            <button onclick="forgetABreak();">Forget a Break</button> <br/>
+                <script>
+                    function simpleSwitch(){
+                        let productID = 7;
+                        switch(productID){
+                            case 1:
+                                console.log(`Product 1`);
+                                break;
+                            case 2:
+                                console.log(`Product 2`)
+                                break;
+                            default:
+                                console.log(`Default`)
+                                break;
+                        }
+                    }
+
+                    function multipleCase(){
+                        let color = "Red";
+
+                        switch(color){
+                            case "Red":
+                            case "Pink":
+                                console.log(`The color is a shade of Red`);
+                                break;
+                            case "Blue":
+                            case "Light Blue":
+                            case "Dark Blue":
+                                console.log("The color is a shade of Blue");
+                                break;
+                            case "Gray":
+                            case "Black":
+                                console.log("The Color is a shade of Black");
+                                break;
+                            default:
+                                console.log("You have selected an unknown color.")
+                                break;
+                        }
+                    }
+                </script>
+        </body>
+</html>
