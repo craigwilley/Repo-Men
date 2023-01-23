@@ -6,7 +6,9 @@
         <body>
             <button onclick="simpleSwitch();">Simple Switch Sample</button> <br/>
             <button onclick="multipleCase();">Multiple Case Statement</button> <br/>
-            <button onclick="forgetABreak();">Forget a Break</button> <br/>
+            <button onclick="strictComparison();">Strict Comparison</button><br/>
+            <button onclick="blockScopeFix();">Block Scope Fix</button><br/>
+            <button onclick="forInSample();">For In Sample</button>
                 <script>
                     function simpleSwitch(){
                         let productID = 7;
@@ -44,6 +46,49 @@
                                 console.log("You have selected an unknown color.")
                                 break;
                         }
+                    }
+
+                    function strictComparison(){
+                        let productID= 2;
+
+                        switch(productID){
+                            case 1:
+                                console.log(`HL Road Frame - Black, 58`);
+                                break;
+                            case 2:
+                                console.log(`Sport-100 Helmet, Red`);
+                                break;
+                            case 3:
+                                console.log(`Mountain Bike Socks, M`);
+                                break;
+                            default:
+                                console.log(`No such product found`)
+                                break;
+                        }
+                    }
+
+                    function blockScopeFix(){
+                        let productID = 2;
+
+                        switch (productID) {
+                            case 1:{
+                                let message = "HL Road Frame - Black, 58"
+                                console.log(message);
+                                break;
+                            }
+                            case 2: {
+                                let message = "Sport-100 Helmet, Red"
+                                console.log(message);
+                                break;
+                            }
+                            default:
+                                console.log(`No such product found`)
+                                break;
+                        }
+                    }
+
+                    function forInSample() {
+                        let p
                     }
                 </script>
         </body>
