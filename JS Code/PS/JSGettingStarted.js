@@ -1,61 +1,106 @@
 const prompt=require("prompt-sync")({sigint:true});
 
 /*
-//Symbols
-let mySymbol = Symbol();
-
-
-//Objects
-let person = {
-    name: "Harry",
-    age: 56,
-    partTime: false,
-    [mySymbol]: `secretInformation`,
-    // Object Methods
-    showInfo: function(){
-        console.log(this.name + ` is ` + this.age);
-    }
+// Truthy and Falsy
+//A string is false if it is empty.
+if(`0`){
+    console.log(`The value is true`)
+}else{
+    console.log(`The value is false`)
 }
 
-console.log(person.name);
-console.log(person.age);
-console.log(person.partTime);
 
-person.age = 33;
-console.log(person.age);
+// if else - else if
+let state =`FL`;
+let taxPercent;
 
-person[`age`] = 44;
-console.log(person.age);
-
-console.log(person.showInfo());
-
-
-// Passing objects to functions
-
-let message = `Hello`;
-
-function changeMessage(message){
-    console.log(message);
+if (state === `FL`){
+    taxPercent = 7;
+}else if (state === `NY`){
+    taxPercent=8.875;
+} else {
+    taxPercent = 0;
 }
 
-changeMessage(`this is the new message`);
+console.log(taxPercent);
 
-// Increment age Function
+//ternary operator. -  (condition) ? true-statement : false statement;
 
-let person = {
-    name: `John`,
-    age: 49,
-    partTime: false
-};
+price= 9
+let message = (price > 10) ? `expensive` : `cheap`;
+console.log(message);
 
-function incrementAge(person){
-    person.age++;
-    console.log(`Happy Birthday, now you are ` + person.age);
+//for loops
+for(let i = 0; i<3; i++){
+    console.log(i);
 }
 
-incrementAge(person);
+//checking to see if I can still log backwards
+
+console.log(`Backwards name print:`)
+let name = `harrison`;
+let backwards =``;
+for(let i = name.length-1; i >= 0; i--){
+    backwards += name[i];
+}
+console.log(backwards);
+
+//while loops
+console.log(`while loops`)
+let count =1;
+while(count<5){
+    console.log(count);
+    count++;
+}
+
+//do while loops
+console.log(`do while loops`)
+let count1 = 1;
+do {
+    console.log(count1);
+    count1++;
+} while (count1 < 5);
+
+//challenge on loops
+console.log(`myCount`)
+let myCount=5;
+while(myCount){
+    console.log(myCount);
+    myCount--;
+}
+
+console.log(`first and second`)
+if(5>=5){
+    console.log(`first`);
+}else{
+    console.log(`second`);
+}
+
+console.log(`third challenge`)
+for(let i=0; i<=5; i++){
+    console.log(i);
+}
+
+
+
+const age = 5;
+const isOldEnough = age >= 16;
+const yearsLeft = (16-age);
+
+if(isOldEnough){
+    console.log(`You are old enough to drive`)
+}else{
+    console.log(`You still have ${yearsLeft} years left till you can drive`)
+}
 */
 
-let dateNow = new Date();
-console.log(dateNow.toDateString() );
+let bmiMark = 28.3;
+let bmiJohn = 30.9;
+
+if(bmiMark >= bmiJohn){
+    console.log(`Mark's BMI (${bmiMark}) is higher than John's (${bmiJohn})!`)
+}else{
+    console.log(`John's BMI (${bmiJohn}) is higher than Mark's (${bmiMark})`)
+}
+
 
