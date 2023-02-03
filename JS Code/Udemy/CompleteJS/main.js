@@ -652,14 +652,16 @@ console.log("penguin1 can fly: ", penguin1.canFly);
 //     backwardString += forwardString[i]
 // }
 // console.log(backwardString);
-*/
-// String again
+
+// backwards String again
 
 let forwardString = `steve`;
 let backwardString = ``;
 
-for(var i = forwardString.length-1; i>0; i--){
+for(var i = forwardString.length-1; i>=0; i--){
     backwardString += forwardString[i]
 }
 console.log(backwardString);
+*/
+
 
