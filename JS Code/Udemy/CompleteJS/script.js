@@ -132,4 +132,59 @@ if(isOldEnough){
 }else{
     console.log(`You are not old enough to drive. You still have ${driveAge - age} left before you can drive.`)
 }
+
+
+const inputYear = `2023`;
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 10);
+
+console.log(typeof NaN);
+
+console.log(String(23),23);
+
+// Type Coercion
+
+console.log(`I am ` + 23 + ` years old`)
+console.log(`23` - `10`);
+
+let n = Number`1` + 1;
+n = n - 1;
+console.log(n);
+
+//Truthy and Falsy
+// 5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean(`name`));
+console.log(Boolean(``));
+
+const money = 0;
+if(money){
+    console.log(`Don't spend it all!`);
+}else{
+    console.log(`You need to get a job.`)
+}
+
+let height = 9;
+if(height){
+    console.log(`Yay! Height is defined`);
+}else{
+    console.log(`Height is Undefined`)
+}
 */
+
+
+//Equality Operators: == vs ===
+
+const age = 18;
+if(age === 18) console.log(`You are now an adult`);
+
+// === is the strict equality / == is the lose equality operator
+// the == does type coercion
+// the === does not do any type coercion
+
+
+
+
+
