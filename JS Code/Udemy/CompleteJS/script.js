@@ -122,7 +122,7 @@ console.log(message2)
 
 // Run the following command from NPM
 //"npm install prompt-sync"
-const prompt=require("prompt-sync")({sigint:true});
+const prompt = require("prompt-sync")({ sigint: true });
 /*const driveAge = 16
 const age = prompt(`Please enter your age `)
 const isOldEnough = age >= 16
@@ -172,7 +172,7 @@ if(height){
 }else{
     console.log(`Height is Undefined`)
 }
-*/
+
 
 
 //Equality Operators: == vs ===
@@ -183,8 +183,20 @@ if(age === 18) console.log(`You are now an adult`);
 // === is the strict equality / == is the lose equality operator
 // the == does type coercion
 // the === does not do any type coercion
+*/
 
+const favorite = Number(prompt("What is your favorite number? "));
+console.log(favorite);
+console.log(typeof favorite);
 
+if (favorite === 23) {
+  console.log(`Cool! 23 is an amazing number`);
+} else if (favorite === 7) {
+  console.log(`7 is also a great number`);
+} else if (favorite === 9) {
+  console.log(`9 is also a great number`);
+} else {
+  console.log(`Sorry, your number is not 7, 9, or 23`);
+}
 
-
-
+if (favorite !== 23) console.log(`Why not 23?`);
