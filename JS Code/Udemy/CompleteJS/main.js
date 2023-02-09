@@ -662,6 +662,47 @@ for(var i = forwardString.length-1; i>=0; i--){
     backwardString += forwardString[i]
 }
 console.log(backwardString);
+
+
+//Type Conversion
+
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number(`John`));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+//Type Coercion
+
+console.log(`I am ` + 23 + ` years old`)
+//this is the same as writing
+console.log(`I am ` + String(23) + ` years old`)
+
+console.log(`23` - `10` - 3);
+//these numbers are coerced to numbers
+
+console.log(`23` * `2`);
+console.log(`23` / `2`);
+
+// Guess the coercion
+let n = `1` + 1;
+n = n - 1;
+
+console.log(n);
+
+//The fix below
+let n2 = Number(`1`) + 1;
+n2 = n2 -1;
+
+console.log(n2);
 */
+
+
+
+
+
 
 
