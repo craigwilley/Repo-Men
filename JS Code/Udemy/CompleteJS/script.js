@@ -1,3 +1,4 @@
+"use strict";
 /*let js = `amazing`;
 console.log(40+8+23-10);
 
@@ -262,7 +263,7 @@ if (dolphinFinal > koalaFinal && dolphinFinal >= 100) {
   console.log(`Can't figure out the final score.`);
 }
 
-*/
+
 //Switch Statement
 
 const day = prompt(`Enter a day of the week: `);
@@ -290,3 +291,98 @@ switch (day) {
   default:
     console.log(`Not a valid day of the week.`);
 }
+
+//Switch statement as a logical operator
+
+let day = `monday`;
+if (day === `monday`) {
+  console.log(`today is monday`);
+} else if (day === `tuesday`) {
+  console.log(`today is tuesday`);
+} else {
+  console.log(`not one of the first days of the week`);
+}
+
+
+// Conditional and ternary operator
+
+const age = 18;
+age >= 18
+  ? console.log(`I am old enough to vote`)
+  : console.log(`I am not old enough to vote`);
+
+const vote = age >= 18 ? true : false;
+console.log(vote);
+
+console.log(`I am old enough to vote: ${vote}`);
+
+
+//Coding challenge 4
+
+let bill = prompt(`Please enter the total price of the meal: `);
+Number(bill);
+let tip = Number(bill) >= 50 && Number(bill) <= 300 ? 0.15 : 0.2;
+let total = Number(bill) + Number(bill * tip);
+console.log(
+  `The bill was: ${total}. The original bill was ${bill} with a tip percentage of ${tip} and a tip of ${
+    total - bill
+  }`
+);
+
+
+
+
+//Part two (we added the 'use strict' to the first line of the page.
+
+let hasDriversLicense = false;
+const passTest = true;
+if (passTest) hasDriversLicense = true;
+if (hasDriversLicense) console.log(`I can drive.`);
+
+const interfaces = `Audio`;
+console.log(interfaces);
+
+
+// Functions
+function logger(name) {
+  console.log(`My name is ` + name);
+}
+//calling / running / invoking the function
+logger(`Bob`);
+logger(`Sally`);
+
+logger(`Hary Potter`);
+logger(`Fred Flintstones`);
+
+function fruitProcessor(apples, oranges) {
+  console.log(apples, oranges);
+  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+  return juice;
+}
+
+const appleJuice = fruitProcessor(5, 3);
+console.log(appleJuice);
+console.log(fruitProcessor(5, 3));
+
+const appleOrangeJuice = fruitProcessor(2, 5);
+console.log(appleOrangeJuice);
+
+
+ */
+
+function calcAge1(birthYear) {
+  return 2037 - birthYear;
+}
+
+console.log(calcAge1(1988));
+const age1 = calcAge1(1988);
+const calcAge2 = function (birthYear) {
+  return 2050 - birthYear;
+};
+const age2 = calcAge2(1988);
+console.log(age1, age2);
+
+//Arrow functions
+
+const calcAge3 = (birthYear) => 2037 - birthYear;
+console.log(calcAge3(1998));
