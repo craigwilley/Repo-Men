@@ -368,7 +368,7 @@ const appleOrangeJuice = fruitProcessor(2, 5);
 console.log(appleOrangeJuice);
 
 
- */
+
 
 function calcAge1(birthYear) {
   return 2037 - birthYear;
@@ -386,3 +386,110 @@ console.log(age1, age2);
 
 const calcAge3 = (birthYear) => 2037 - birthYear;
 console.log(calcAge3(1998));
+
+
+
+function cutFruitPieces(fruit) {
+  return fruit * 3;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges.`;
+  return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
+
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years.`);
+    return retirement;
+  } else {
+    console.log(`${firstName} has already retired.`);
+    return -1;
+  }
+};
+console.log(yearsUntilRetirement(1991, `Bob`));
+console.log(yearsUntilRetirement(1970, `Mike`));
+
+//Function declaration (Function that can be used before it is declared (hoisted)
+
+function calcAge(birthYear) {
+  return 2037 - birthYear;
+}
+
+// Function expression (Function value stored in a variable)
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+// Arrow function ( great for quick one line functions has no "this" keyword
+const calcAge = (birthYear) => 2037 - birthYear;
+
+
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+const checkWinner = function (avgKoala, avgDolphin) {
+  if (avgKoala >= 2 * avgDolphin) {
+    console.log(`Koalas are the winner with a score of ${avgKoala}.`);
+  } else if (avgDolphin >= 2 * avgKoala) {
+    console.log(`Dolphins are the winner with a score of ${avgDolphin}.`);
+  } else {
+    console.log(`The final score was not double the other team.`);
+  }
+};
+
+let avgKoala = calcAverage(65, 54, 49);
+let avgDolphin = calcAverage(44, 23, 71);
+
+checkWinner(avgKoala, avgDolphin);
+
+avgKoala = calcAverage(23, 34, 27);
+avgDolphin = calcAverage(85, 54, 41);
+checkWinner(avgKoala, avgDolphin);
+
+
+
+// Arrays
+
+const friends = [`michael`, `stephen`, `peter`];
+console.log(friends);
+
+const years = new Array(1991, 1984, 1999, 2008, 2020);
+console.log(years);
+
+console.log(friends[0], friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = `john`;
+console.log(friends);
+
+const firstName = `fred`;
+const values = [firstName, friends, `wilson`, 3033 - 1988];
+console.log(values);
+
+// array practice
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+const years = [1990, 1967, 2002, 2010, 2018];
+
+for (let i = 0; i <= years.length - 1; i++) {
+  const ages = calcAge(years[i]);
+  console.log(ages);
+}
+*/
