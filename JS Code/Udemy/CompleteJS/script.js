@@ -492,4 +492,33 @@ for (let i = 0; i <= years.length - 1; i++) {
   const ages = calcAge(years[i]);
   console.log(ages);
 }
+
+
+// push to the end of an array
+const friends = [`Sulley`, `Mike`, `Sylvia`];
+friends.push(`Waternoose`);
+console.log(friends);
+friends.unshift(`Roz`);
+console.log(friends);
+const gone1 = friends.pop();
+const gone2 = friends.pop();
+friends.shift();
+console.log(friends);
+console.log(gone1, gone2);
+
+console.log(friends.indexOf(`Mike`));
+
+console.log(friends.includes(`Sulley`));
+
+const bill = [125, 555, 44];
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
+
+console.log(tip);
+const totals = [tip[0] + bill[0], tip[1] + bill[1], tip[2] + bill[2]];
+console.log(totals);
 */
