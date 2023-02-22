@@ -521,4 +521,92 @@ const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
 console.log(tip);
 const totals = [tip[0] + bill[0], tip[1] + bill[1], tip[2] + bill[2]];
 console.log(totals);
+
+// Objects
+
+const person = {
+  firstName: `Harry`,
+  lastName: `Potter`,
+  age: 14,
+  birthYear: 1991,
+  house: `Gryffindor`,
+  profession: `wizard`,
+  apparate: true,
+  calcAge: function () {
+    return 2023 - this.birthYear;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.profession
+    } and he ${this.apparate ? `can` : `can't`} apparate`;
+  },
+};
+
+console.log(person);
+console.log(person.house);
+console.log(person[`lastName`]);
+
+const nameKey = `Name`;
+console.log(person[`first` + nameKey]);
+console.log(person[`last` + nameKey]);
+
+const intrestedIn = prompt(
+  `What do you want to know about Harry Potter? You can choose between, firstName, lastName, age, job, and friends: `
+);
+
+if (person[intrestedIn]) {
+  console.log(person[intrestedIn]);
+} else {
+  console.log(`Wrong Request`);
+}
+
+person.location = `hogwarts`;
+person[`sex`] = `male`;
+console.log(person);
+
+console.log(
+  `${person.firstName} has ${friends.length} friends and his best friend is ${friends[0]}`
+);
+
+console.log(person.calcAge());
+console.log(person[`calcAge`]());
+
+console.log();
+
+console.log(person.getSummary());
+
+const mark = {
+  firstName: `Mark`,
+  lastName: `Miller`,
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const john = {
+  firstName: `John`,
+  lastName: `Smith`,
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+if (john.bmi > mark.bmi) {
+  console.log(
+    `${john.firstName}'s BMI (${john.bmi}) is higher than ${mark.firstName}'s (${mark.bmi}) !`
+  );
+} else {
+  console.log(
+    `${mark.firstName}'s BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi}) !`
+  );
+}
 */
