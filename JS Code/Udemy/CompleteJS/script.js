@@ -610,3 +610,45 @@ if (john.bmi > mark.bmi) {
   );
 }
 */
+
+//loops
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`Lifting wieghts...Repetition ${i}`);
+}
+
+//looping arrays
+const friendArray = [`Harry`, `Ron`, `Hermione`, `Albus`, 45, `Fred`];
+const types = [];
+for (let i = 0; friendArray.length - 1 >= i; i++) {
+  console.log(friendArray[i]);
+  // types[i] = typeof friendArray[i];
+  types.push(typeof friendArray[i]);
+}
+console.log(types);
+
+const years = [1988, 2007, 1968, 2004];
+const ages = [];
+for (let i = 0; years.length - 1 >= i; i++) {
+  //ages[i] = 2023 - years[i];
+  ages.push(2023 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+// console.log(`--ONLY STRINGS--`);
+// for (let i = 0; friendArray.length - 1 >= i; i++) {
+//   if (typeof friendArray[i] !== `string`) continue;
+//   console.log(friendArray[i], typeof friendArray);
+// }
+
+// console.log(`--BREAK WITH NUMBER--`);
+// for (let i = 0; friendArray.length - 1 >= i; i++) {
+//   if (typeof friendArray[i] !== `string`) break;
+//   console.log(friendArray[i], typeof friendArray);
+// }
+
+//looping backwards
+for (let i = friendArray.length - 1; i >= 0; i--) {
+  console.log(friendArray[i]);
+}
