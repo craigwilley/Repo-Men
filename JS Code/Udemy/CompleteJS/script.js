@@ -609,7 +609,7 @@ if (john.bmi > mark.bmi) {
     `${mark.firstName}'s BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi}) !`
   );
 }
-*/
+
 
 //loops
 
@@ -652,3 +652,13 @@ console.log(ages);
 for (let i = friendArray.length - 1; i >= 0; i--) {
   console.log(friendArray[i]);
 }
+
+*/
+
+// The While Loop
+
+for (let i = 1; i <= 10; i++){
+  console.log(`Lifting weights repetition ... ${i}`)
+}
+
+while(i>20)
