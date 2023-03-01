@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/craigwilley/Repo-Men#readme",
   "dependencies": {
+    "eslint": "^8.35.0",
     "prompt-sync": "^4.2.0",
     "tar": "^6.1.13"
   }

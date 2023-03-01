@@ -609,7 +609,7 @@ if (john.bmi > mark.bmi) {
     `${mark.firstName}'s BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi}) !`
   );
 }
-*/
+
 
 //loops
 
@@ -652,3 +652,53 @@ console.log(ages);
 for (let i = friendArray.length - 1; i >= 0; i--) {
   console.log(friendArray[i]);
 }
+
+
+
+// The while loop
+let i = 1;
+while (i <= 10) {
+  console.log(`Repetition ${i}`);
+  i++;
+}
+
+// Rolling the dice till 6
+let dice = 0;
+while (dice !== 6) {
+  dice = Math.floor(Math.random() * 6 + 1);
+  console.log(`The value of your roll was ${dice}`);
+  if (dice === 6) console.log(`You rolled a six, we are ending the loop`);
+}
+
+
+// Coding Challenge #4
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
+
+for (let i = 0; i < bills.length - 1; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tips[i] + bills[i]);
+}
+console.log(totals);
+
+// Harder Challenge 4
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
+*/
