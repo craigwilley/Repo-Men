@@ -702,3 +702,61 @@ console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
 */
+
+// Challenge 5
+/* You work for a company building smart home thermostats.
+the most recent task is given a javascript array of temperatures of one day,
+calculate the temperature amplitude. Keep in mind that there might be a sensor error.
+
+
+function calculateTemperatureAmplitude(temperatures) {
+  // Remove any outlier values that are more than 3 standard deviations from the mean
+  const mean =
+    temperatures.reduce((acc, val) => acc + val, 0) / temperatures.length;
+  const stdDev = Math.sqrt(
+    temperatures.reduce((acc, val) => acc + (val - mean) ** 2, 0) /
+      temperatures.length
+  );
+  const filteredTemperatures = temperatures.filter(
+    (val) => Math.abs(val - mean) < 3 * stdDev
+  );
+
+  // Find the highest and lowest temperatures in the cleaned array
+  const maxTemp = Math.max(...filteredTemperatures);
+  const minTemp = Math.min(...filteredTemperatures);
+
+  // Calculate the amplitude and return the result
+  const amplitude = maxTemp - minTemp;
+  return amplitude;
+}
+ */
+
+const temperatures = [3, -2, -6, -1, `error`, 9, 13, 17, 15, 14, 9, 5];
+
+const calcTempAmplitudeNew = function (t1, t2) {
+  const array1 = [`a`, `b`, `c`];
+  const array2 = [`d`, `e`, `f`];
+  const array3 = array1.concat(array2);
+
+  const temps = t1.concat(t2);
+  console.log(temps);
+
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+
+    if (typeof curTemp !== "number") continue;
+
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
+console.log(amplitudeNew);
+
+// Merge two arrays and then run the function again

@@ -11,6 +11,10 @@ body{
     padding: 48px 64px;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .container{
     max-width: 1500px;
     margin: 0 auto;
@@ -22,8 +26,6 @@ body{
     align-items: center;
     justify-content: space-between;
 }
-
-
 
 .main{
     display: grid;
