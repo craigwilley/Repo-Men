@@ -653,12 +653,193 @@ for (let i = friendArray.length - 1; i >= 0; i--) {
   console.log(friendArray[i]);
 }
 
-*/
 
-// The While Loop
 
-for (let i = 1; i <= 10; i++){
-  console.log(`Lifting weights repetition ... ${i}`)
+// The while loop
+let i = 1;
+while (i <= 10) {
+  console.log(`Repetition ${i}`);
+  i++;
 }
 
-while(i>20)
+// Rolling the dice till 6
+let dice = 0;
+while (dice !== 6) {
+  dice = Math.floor(Math.random() * 6 + 1);
+  console.log(`The value of your roll was ${dice}`);
+  if (dice === 6) console.log(`You rolled a six, we are ending the loop`);
+}
+
+
+// Coding Challenge #4
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
+
+for (let i = 0; i < bills.length - 1; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tips[i] + bills[i]);
+}
+console.log(totals);
+
+// Harder Challenge 4
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+
+console.log(calcAverage([2, 3, 7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
+*/
+
+// Challenge 5
+/* You work for a company building smart home thermostats.
+the most recent task is given a javascript array of temperatures of one day,
+calculate the temperature amplitude. Keep in mind that there might be a sensor error.
+
+
+function calculateTemperatureAmplitude(temperatures) {
+  // Remove any outlier values that are more than 3 standard deviations from the mean
+  const mean =
+    temperatures.reduce((acc, val) => acc + val, 0) / temperatures.length;
+  const stdDev = Math.sqrt(
+    temperatures.reduce((acc, val) => acc + (val - mean) ** 2, 0) /
+      temperatures.length
+  );
+  const filteredTemperatures = temperatures.filter(
+    (val) => Math.abs(val - mean) < 3 * stdDev
+  );
+
+  // Find the highest and lowest temperatures in the cleaned array
+  const maxTemp = Math.max(...filteredTemperatures);
+  const minTemp = Math.min(...filteredTemperatures);
+
+  // Calculate the amplitude and return the result
+  const amplitude = maxTemp - minTemp;
+  return amplitude;
+}
+
+
+const temperatures = [3, -2, -6, -1, `error`, 9, 13, 17, 15, 14, 9, 5];
+
+const calcTempAmplitudeNew = function (t1, t2) {
+  const array1 = [`a`, `b`, `c`];
+  const array2 = [`d`, `e`, `f`];
+  const array3 = array1.concat(array2);
+
+  const temps = t1.concat(t2);
+  console.log(temps);
+
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+
+    if (typeof curTemp !== "number") continue;
+
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
+console.log(amplitudeNew);
+
+// Merge two arrays and then run the function again
+
+
+[2, 4, 6, 8].forEach(function (el) {
+  console.log(el);
+});
+
+const times10 = [2, 4, 6, 8].map(function (el) {
+  return el * 10;
+});
+console.log(times10);
+
+const times100 = [2, 4, 6, 8].map((el) => el * 100);
+console.log(times100);
+
+
+const CATEGORIES = [
+  { name: "technology", color: "#3b82f6" },
+  { name: "science", color: "#16a34a" },
+  { name: "finance", color: "#ef4444" },
+  { name: "society", color: "#eab308" },
+  { name: "entertainment", color: "#db2777" },
+  { name: "health", color: "#14b8a6" },
+  { name: "history", color: "#f97316" },
+  { name: "news", color: "#8b5cf6" },
+];
+
+const allCategories = CATEGORIES.map((el) => el.name);
+console.log(allCategories);
+
+const initialFacts = [
+  {
+    id: 1,
+    text: "React is being developed by Meta (formerly facebook)",
+    source: "https://opensource.fb.com/",
+    category: "technology",
+    votesInteresting: 24,
+    votesMindblowing: 9,
+    votesFalse: 4,
+    createdIn: 2021,
+  },
+  {
+    id: 2,
+    text: "Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%",
+    source:
+      "https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids",
+    category: "society",
+    votesInteresting: 11,
+    votesMindblowing: 2,
+    votesFalse: 0,
+    createdIn: 2019,
+  },
+  {
+    id: 3,
+    text: "Lisbon is the capital of Portugal",
+    source: "https://en.wikipedia.org/wiki/Lisbon",
+    category: "society",
+    votesInteresting: 8,
+    votesMindblowing: 3,
+    votesFalse: 1,
+    createdIn: 2015,
+  },
+];
+
+function calcFactAge(year) {
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - year;
+
+  if (age >= 0) return age;
+  else
+    return `That does not compute. The year needs to be less or equal to ${currentYear}`;
+}
+
+const factAges = initialFacts.map((el) => calcFactAge(el.createdIn));
+console.log(factAges);
+console.log(factAges.join("-"));
+
+
+//Code from the full stack app
+factsList.insertAdjacentHTML(`afterbegin`, `<li>Jonas</li>`);
+factsList.insertAdjacentHTML(`afterbegin`, `<li>Mike</li>`);
+
+
+*/
