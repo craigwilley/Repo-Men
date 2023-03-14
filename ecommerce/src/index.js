@@ -1,15 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 // Product provider
-import ProductProvider from './contexts/ProductContext'
+import ProductProvider from "./contexts/ProductContext";
+// Sidebar provider
+import SidebarProvider from "./contexts/SidebarContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <SidebarProvider>
     <ProductProvider>
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>,
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
     </ProductProvider>
+  </SidebarProvider>
 );
