@@ -842,4 +842,51 @@ factsList.insertAdjacentHTML(`afterbegin`, `<li>Jonas</li>`);
 factsList.insertAdjacentHTML(`afterbegin`, `<li>Mike</li>`);
 
 
+
+
+// Kelvin Converter
+
+const measureKelvin = function () {
+  const measurement = {
+    type: `temp`,
+    unit: `celsius`,
+    value: Number(prompt("Degrees celsius? ")),
+  };
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+
+console.log(measureKelvin());
 */
+
+// My Solution Challenge 1
+const testData1 = [17, 21, 23];
+const testData2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr1, arr2) {
+  for (let i = 0; arr1.length - 1 >= i; i++) {
+    console.log(`${arr1[i]} degrees celsius in ${[i + 1]} days`);
+  }
+  console.log(`======================`);
+  for (let i = 0; arr2.length - 1 >= i; i++) {
+    console.log(`${arr2[i]} degrees celsius in ${[i + 1]} days`);
+  }
+};
+
+printForecast(testData1, testData2);
+
+// Actual solution challenge 1
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForcast2 = function (arr) {
+  let str = ``;
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}°C in ${i + 1} days ...`;
+  }
+  console.log(`...` + str);
+};
+
+printForcast2(data1);
+printForcast2(data2);

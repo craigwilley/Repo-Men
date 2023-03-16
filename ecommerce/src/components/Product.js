@@ -3,8 +3,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 // Import icons
 import { BsPlus, BsEyeFill } from "react-icons/bs";
-
+// Import cart context
+import { CartContext } from "../contexts/CartContext";
 const Product = ({ product }) => {
+  const { addToCart } = useContext(CartContext);
   console.log(product);
   // De-structure the product
   const { id, image, category, title, price } = product;
