@@ -1,0 +1,390 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Craig Willey',
+  date: '2023-01-24',
+    title: 'Cyber Security Capstone Part 2',
+    description: 'Recently I graduated from Western Governors University in Cyber Security and Information Assurance. Here are the two documents that I wrote for the final project of that program.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+In this second section I lay out the solution described in article 1.
+
+<center>
+## Super Club: Automation of OS Security Patching
+</center>
+## Introduction
+
+Operating System (OS) Security Patching refers to updating the OS software and hardware to fix security vulnerabilities and bugs. The goal of OS Security Patching is to protect the system from potential cyberattacks and other security threats by eliminating known vulnerabilities in the OS and its components.
+
+The process of OS Security Patching typically involves identifying and prioritizing the most critical updates and patches, testing and validating them, and then deploying them to the systems in the Super Club Production environment. The patching frequency depends on the OS type, the vulnerability severity, and the risk to Super Club.
+
+OS Security Patching usually includes a wide range of updates, including security-related updates, bug fixes, and performance improvements. The updates come through the OS vendors’ enterprise client distribution central repository (Red Hat Satellite and SUMA Server).
+
+It is important to note that patching can be a complex process, and it is crucial to test the patches in a lower sandbox environment before applying them to the production system to minimize the risk of introducing new bugs or compatibility issues.
+
+OS Security Patching is critical to maintaining the security and stability of Super Clubs’ computer systems. It is an ongoing process that involves identifying, testing, and deploying updates and patches to fix known vulnerabilities and protect systems from potential cyberattacks. By regularly applying OS security patches, Super Club can reduce the risk of security breaches and ensure that their systems are up-to-date and secure.
+
+## Consensus-Based Policies
+
+Consensus-based policies for OS Security Patching refer to regularly updating the operating system (OS) and software to fix security vulnerabilities and bugs. These policies were developed and implemented for the Super Club warehouse chain through a consensus-building process that involved multiple stakeholders, including IT administrators, security professionals, and software vendors.
+One of the critical principles of consensus-based OS Security Patching is that it is an ongoing process. Continuous upgrades mean the Super Club IT department must regularly work with stakeholders to upgrade Super Clubs’ business environment. Even though the system is working and compliant, it will still degrade. Over time new vulnerabilities will continue to be discovered, thus requiring almost daily patching. While daily patching is not feasible, Super Club should work toward applying the patches as soon as possible, working within the business constraints. Super Clubs’ system environment will continually require three patch types using automated patching:
+
+1. Vendor Software Patches,
+2. Application Patches, and
+3. OS Level Kernel Patches.
+
+Every time the discovery of a new vulnerability is added to the database, the stakeholders will evaluate it to see how quickly the IT employees need to implement it in production.
+Super Club has implemented the security standard that follows the CISA recommendations of patching critical vulnerabilities within 15 days (CISA). Following Industry standards, the NIST and vendor-provided vulnerability databases from Red Hat and SUSE should be the source of truth when assessing an exploit’s severity. Implementing these standards and procedures requires a high level of coordination and communication between Super Club stakeholders and a strong understanding of the current security landscape.
+
+One of the critical challenges of implementing consensus-based OS Security Patching is balancing the need for security with the need for stability and continuity of operations or business needs. For example, applying a patch that fixes a critical security vulnerability may introduce new bugs or cause compatibility issues with other software the business requires to complete its tasks. Consensus-based policies typically involve a thorough testing and validation process before applying them in the production environment. These policies were implemented in the previous project for Super Club. Ongoing testing and validation are reducing errors in the production landscape.
+
+Another essential aspect of consensus-based standards and practices is that they require all stakeholders’ participation. IT administrators, security professionals, and software vendors must all be involved in the decision-making process and take responsibility for patching the production environment promptly and working on the same schedule. Scheduling these patches will require a high level of trust and cooperation between different stakeholders and effective communication and information-sharing to ensure the patch is applied to maintain the security policies and procedures previously put in place.
+
+Consensus-based standards and practices for OS Security Patching are essential to maintaining the security and stability of modern computer systems. The previous project upgraded the OS Security patch process to an automated patch system. Doing so created many new standards and practices that include the following:
+
+A patch management policy was established: This policy outlined the procedures for identifying, testing, and deploying updates and patches. Super Club also defined the roles and responsibilities of different stakeholders in this policy. This policy is listed as an artifact later in this document.
+
+Prioritized updates and patches: This new practice identified and prioritized the most critical updates and patches based on the level of risk and the potential vulnerability the patch eliminated from Super Clubs’ environment.
+
+Automated the patch management process: Using the automation tools that Super Club implemented streamlined the patch process. Automation helped identify the vulnerability, tested the patch in a lower environment, and deployed the patch to the Super Club production environment. Thanks to automation, the process is much faster than it was and will continue to be quick in future patch releases. As time progresses, fewer human resources will be used as automation becomes fine-tuned.
+
+Regularly testing and validating the updates and patches: Implementing a sandbox environment where Super Club could evaluate the patch changes before deploying them into production increased the integrity of the automated patch process. Before deploying updates and patches, patches were tested and validated to ensure they did not introduce new bugs or cause compatibility issues in the live production system.
+
+Maintaining a current software inventory: Before this project was implemented for Super Club, there needed to be a precise inventory of the assets in Super Clubs’ landscape. Establishing a clear software inventory of all the versions and installed service packs helps Super Club maintain an environment where the software is up-to-date and patched.
+
+Establishing incident response plan: Super Club created an incident response plan to deal with security incidents. Examples of these could include a missed patch or a zero-day exploit.
+
+Monitoring and reporting: A new monitoring and reporting system was implemented as part of the project. This new system allows Super Club to ensure that updates and patches are being deployed promptly and effectively. The new reports created regularly report on the progress of the patching efforts to the Super Club stakeholders.
+
+Constant vulnerability database updates: The Super Club Information Security department no longer must worry about actively searching third-party databases for new vulnerabilities. Nessus, a security scanning software, was implemented as part of the former project. Reports are now generated two times per week showing the new vulnerabilities found and if they apply to the current technology landscape of Super Club.
+
+Regularly training and educating employees: Super Club implemented a training program as part of the project. This new education center is responsible for training Super Club employees about the importance of patch management and the procedures for identifying and reporting vulnerabilities.
+
+
+## Decision-Making and Environmental Needs
+
+The OS Security Patching Automation that was established during the former project supports the current decision-making capabilities of Super Club by providing a systematic approach to identifying, testing, and deploying updates and patches to fix known vulnerabilities. Enabling management with the correct information about the IT landscape and aiding in making decisions allows them to protect the systems from potential cyberattacks. Super Club management now has the data needed to decide when and how to apply patches based on the severity of the vulnerabilities. The reporting system put in place shows the risk to Super Clubs’ business and the risk profile that is directly linked to the potential impact on customers.
+
+By implementing a patch management policy, Super Club established a straightforward procedure for identifying, testing, and deploying updates and patches and defined different stakeholders’ specific roles and responsibilities. The policy helps ensure that patches are applied promptly and effectively and that the process is transparent and accountable.
+
+The new system prioritizes updates and patches based on risk and potential impact. By focusing on the most critical vulnerabilities first, Super Club can resolve the most severe threats, and automation enables a quicker turnaround time to resume business operations.
+
+Automating the patch management process also helps Super Club make more effective decisions by streamlining the process of identifying, testing, and deploying updates and patches, reducing human error risk.
+
+Monitoring and reporting on the progress of the patching process also enable Super Club to make informed decisions about the effectiveness of the patching process and whether any improvements are needed to the automation going forward.
+
+OS Security Patching supports decision-making capabilities by providing a systematic approach to identifying and addressing vulnerabilities, which helps Super Club make informed decisions about when and how to apply patches while reducing the risk of security breaches and ensuring that systems are up-to-date and secure.
+
+After implementing OS Security Patching, the environment’s needs vary and depend on the specific requirements of Super Club. However, generally, the following are some considerations of the critical needs:
+
+* Network infrastructure: A robust and reliable network infrastructure is essential for OS Security Patching. The infrastructure must have sufficient bandwidth and reliable connections to ensure that updates and patches can be downloaded and deployed to systems quickly and efficiently.
+* System inventory: An accurate systems inventory of all the hosts, software, and versions in Super Clubs’ landscape is crucial for effective OS Security Patching. This information is needed to determine which systems require updates and which systems are already compliant and up to date.
+* Automation tools: Automation tools are essential for streamlining the process of identifying, testing, and deploying updates and patches. Using Ansible and Puppet, Super Club can schedule updates, receive automated testing reports, and monitor systems once the patch is complete.
+* Testing environment: A dedicated testing environment is essential for testing and validating updates and patches before deploying them to production systems. Testing helps to minimize the risk of introducing new bugs into the production environment.
+* Incident response plan: An incident response plan is essential for dealing with security incidents that may arise due to a missed patch or a zero-day exploit.
+* Regular training and education: Regular instruction and education are needed to ensure that employees understand the importance of OS Security Patching and the procedures for identifying and reporting vulnerabilities.
+* Compliance requirements: Super Club must be aware of compliance requirements and ensure that their patching process meets them.
+
+By considering these needs, Super Club can create an environment conducive to effective OS Security Patching and ensure that their systems are kept up-to-date and secure.
+
+## Cybersecurity Assurance Criteria
+
+Through the project that Super Club implemented, IT employees can now ensure that the technology landscape is secure. Automation of OS Security Patching promotes automation in cybersecurity by streamlining the process of identifying, testing, and deploying updates and patches, which can help to reduce the risk of human error. Using automation tools, Super Club can now schedule updates and patches, automate testing and validation, and monitor the progress of the patching process.
+
+Automation can help apply updates and patches in a timely and consistent manner, which is essential for maintaining the security and stability of systems. For example, automation can schedule updates and patches to execute during maintenance windows, which can minimize the impact on operations.
+
+Automation also has helped reduce the IT staff’s workload, allowing them to focus on more critical tasks. Super Club has used automation tools to scan systems for vulnerabilities, identify which systems require maintenance, and ensure that the hosts have the current patch level installed.
+
+Additionally, automation has improved the patching process’s accuracy and efficiency. Automation has tested and validated updates and patches before deploying them to production systems, which has minimized the risk of introducing new compatibility issues.
+
+OS Security Patching has improved and modernized security by addressing known vulnerabilities in the operating system and its components. Cybercriminals can exploit vulnerabilities to gain unauthorized access to systems, steal sensitive information, or disrupt operations. By applying updates and patches to fix these vulnerabilities, Super Club has reduced the risk of security breaches and protected its systems from potential cyberattacks.
+
+OS Security Patching also helped to keep systems up to date with the latest security features and technologies. As new threats and vulnerabilities come forward, software vendors have released updates and patches that address these issues and improve the operating system’s security. Super Club has protected its systems against the latest threats by regularly applying these updates and patches.
+
+Additionally, OS Security Patching has supported compliance with regulatory standards and industry best practices. Many regulatory standards and guidelines have required Super Club to keep its systems up-to-date and patched to reduce the risk to the consumer. By regularly applying OS patches, Super Club has demonstrated compliance with these requirements and maintained the trust of customers and vendors.
+
+The OS Security Patching project has implemented industry-standard security tools. It has allowed Super Club to maintain a secure environment in several ways:
+
+* Industry-standard security tools: The Super Club project introduced updates that integrated industry-standard security tools, such as firewalls, intrusion detection, and prevention systems, and antivirus software. These updates improved the effectiveness of the IT staff by enhancing their capabilities of finding and resolving threats.
+* Security infrastructure: The OS Security Patching Project included updates and patches that improved the security infrastructure of the operating systems in use by Super Club. Patching updates consisted of securing OS kernel, libraries, and other components that formed the foundation of the Super Clubs’ security posture. These updates strengthened the system’s protection by addressing known vulnerabilities, improving the effectiveness of built-in security features, and enhancing the system’s ability to detect and respond to security threats.
+* Maintaining a secure environment: The OS Security Patching project contributed to maintaining a safe environment by ensuring that all systems were up-to-date and patched. By regularly applying updates and patches, Super Club reduced the risk of security breaches and protected its systems from potential cyberattacks.
+
+Patching maintains a secure environment by addressing known vulnerabilities, integrating industry-standard security tools, improving the security infrastructure of the operating system, and ensuring that all hosts are compliant.
+
+
+## Data Collection and Implementation Elements
+
+OS Security Patching does not typically collect digital evidence, including data for analysis or forensics. OS Security Patching primarily addresses known vulnerabilities in the operating system and its components to reduce the risk of security breaches and protect systems from potential cyberattacks.
+
+However, as part of the Super Club OS Security Patching Project, the following security measures were implemented: endpoint protection, intrusion detection, prevention systems, and security information and event management (SIEM) systems. In conjunction with OS Security Patching, these systems collect and analyze data for forensics.
+
+These security measures can collect data such as logs and system events, which Super Club can analyze to detect security threats and breaches. The Super Club IT department can use forensic analysis to identify the cause of security incidents, determine the scope of the damages, and gather information for incident response and recovery.
+
+Additionally, Super Club has implemented a change management process that allows them to track and log all changes made to the systems, including OS patches. This information can determine the system’s state before and after an incident and identify potential vulnerabilities that allow hackers into systems meant to be secure.
+
+The OS automated patching project has implemented confidentiality, integrity, and availability (CIA) in several ways:
+
+* Confidentiality: Automating OS Security Patching has addressed known vulnerabilities that cybercriminals exploit to gain unauthorized access to systems and steal sensitive information. By applying updates and patches to fix these vulnerabilities, Super Club has reduced the risk of security breaches and protected its systems and data confidentiality.
+* Integrity: OS Security Patching has improved the integrity of the Super Club systems by addressing known vulnerabilities and bugs. These exploits could allow hackers to disrupt operations or tamper with data if left unchecked. By applying updates and patches, Super Club has ensured that its systems are running securely and that the integrity of its data is protected.
+* Availability: OS Security Patching has contributed to maintaining the availability of systems by ensuring that they are up-to-date and patched. By regularly applying updates and patches, Super Club has reduced the risk of security breaches and protected its systems from potential cyberattacks. In addition, by automating the patching process, Super Club has applied patches that introduced updates in a timely and consistent manner, which helped maintain systems availability and minimized the impact on operations.
+
+The OS Security Patching project has improved the confidentiality, integrity, and availability of systems by addressing known vulnerabilities, improving the integrity of systems, and ensuring systems compliance.
+
+## Investigation and Mitigation of Cybersecurity Incidents and Crimes
+
+OS Security Patching has been essential in investigating and mitigating cybersecurity incidents and crimes within the Super Club environment by providing a systematic approach to identifying and addressing vulnerabilities that attackers could exploit. Here are a few ways OS Security Patching has helped in this regard:
+
+Identifying vulnerabilities: OS Security Patching has helped identify the operating system’s vulnerabilities and its components that attackers could exploit. By regularly applying updates and patches, Super Club has ensured that its systems are protected against known vulnerabilities and reduced the risk of security breaches.
+
+Incident response planning: A robust incident response plan has aided Super Club in quickly detecting, responding to, and mitigating cybersecurity incidents. The incident response plan is activated when a security incident occurs. The plan contained and isolated the affected systems prevented further damage and restored normal operations.
+
+Forensics and analysis: By collecting and analyzing system logs, network traffic, and other data, Super Club has identified the causes of security incidents and determined the scope of the damage. Super Club has used this information to identify the specific vulnerabilities hackers exploited and developed and implemented effective mitigation strategies.
+
+Post-incident review: OS Security Patching has also helped Super Club learn from cybersecurity incidents by conducting a post-incident inspection. Super Club has reviewed and identified any vulnerabilities or weaknesses that the attacker exploited and developed and implemented improvements to maintain Super Clubs’ security posture.
+
+OS Security Patching has been essential in investigating and mitigating cybersecurity incidents and crimes within the Super Club environment by providing a systematic approach to identifying and addressing vulnerabilities, activating an incident response plan, collecting and analyzing data, and conducting a post-incident review to improve Super Clubs’ security posture.
+
+## Cybersecurity Plan, Standards, or Procedures
+
+There were several cybersecurity plans, standards, or procedures that Super Club developed for the automating OS Security Patching project:
+
+* Patch management policy: A patch management policy is a document that outlines the procedures for identifying, testing, and deploying updates and patches, as well as the roles and responsibilities of different stakeholders. This policy has helped ensure that Super Club applies patches promptly and effectively and that the patch process is transparent and accountable.
+* Prioritization of updates and patches: Super Club developed a plan for prioritizing updates and patches to identify and prioritize the most critical updates and patches based on the level of risk and the potential impact on Super Club. Patch Prioritization has helped Super Club focus on the most critical vulnerabilities first, which has mitigated the most severe risks as quickly as possible.
+* Automation plan: Super Club developed an automation plan to streamline identifying, testing, and deploying updates and patches. This plan includes using automation tools to schedule updates and patches, automate testing and validation, and monitor the progress of the patching process.
+* Testing and validation procedures: Developing Testing and validation procedures validate and test the updates and patches before deploying them to production systems. Testing can minimize the risk of introducing new bugs or compatibility issues. As Super Club has implemented this procedure, they have had more successful upgrades as automated patching has rolled out.
+* Incident response plan: Developing an incident response plan allowed Super Club to deal with security incidents resulting from a missed patch or a zero-day exploit. This plan includes procedures for detecting, containing, and mitigating security incidents and reporting and communicating about the incident.
+* Monitoring and reporting: Using procedures for monitoring and reporting the patch progress to ensure the updates went into the system successfully and removed the initial vulnerability.
+* Compliance: Super Club developed procedures to enhance its compliance with regulatory agencies. The OS Patch process that Super Club implemented meets all the compliance requirements for external auditors.
+
+By developing these cybersecurity plans, standards, and procedures, Super Club has effectively managed the process of OS Security Patching and ensured that their systems are kept up-to-date and secure.
+
+# Alignment with Cybersecurity Initiatives or Regulatory Compliance
+
+OS Security Patching aligns with cybersecurity initiatives and regulatory compliance by addressing known vulnerabilities in the operating system and its hardware components. Automated patching keeps the systems up to date with the latest security features and technologies. Ensuring systems are compliant helps Super Club reduce the risk of security breaches and protect its systems from cyberattacks.
+
+Many cybersecurity initiatives and regulatory compliance frameworks require Super Club to keep its systems up-to-date and patched to reduce the risk of security breaches. For example, the NIST Cybersecurity Framework (NIST CSF) recommends that Super Club identify and protect against known vulnerabilities, and the PCI DSS standard requires Super Club to "protect stored cardholder data by implementing one or more layers of security" (PCIDSS)
+
+By regularly applying updates and patches, Super Club can demonstrate compliance with these requirements and maintain the trust of customers and partners. Automating the patching process has also helped Super Club apply updates promptly and consistently, reducing the risk of security breaches and protecting against potential cyberattacks.
+
+In addition, OS Security Patching can also support compliance with regulatory standards, such as HIPAA, which require Super Club to implement technical safeguards to protect electronically protected health information (ePHI) and maintain the confidentiality, integrity, and availability of electronic communication.
+
+The OS Security Patching project that Super Club implemented aligns with cybersecurity initiatives, regulatory compliance, and industry best practices.
+
+## Applications, Source Code, Executable Files, Tools, Installation Guides, or User Guides
+
+OS Security Patching typically involves developing and deploying several different types of applications, source code, executable files, tools, installation guides, and user guides. These include:
+
+* Patch management software: This software scans systems for vulnerabilities and identifies which systems require updates and patches. The software schedules updates and patches, automates testing and validation, and monitors the patch's progress across the landscape.
+* Patches: Patches are updates to the operating system or its components that fix known vulnerabilities and protect systems from potential cyberattacks. Patches can be in the form of software updates, service packs, or hotfixes.
+* Installation guides: Installation guides provide step-by-step instructions for installing and configuring the patch management software and applying updates and patches.
+* User guides: User guides are documentation that provides instructions and information on how to use the patch management software and other tools, such as identifying and deploying updates and patches.
+* Testing and validation: Using Validation and Testing tools, the OS patch is analyzed in a sandbox environment before applying it to the production system. This testing and validation can minimize the risk of introducing new bugs or compatibility issues.
+* Monitoring and reporting tools: These tools can track the progress of the patching process, monitor and report on the status of systems, and validate their compliance with patch management policies.
+
+The OS Security Patching project implemented many new technologies. While every change implemented is out of the scope of this discussion, the overall tools and guides are critical for ensuring that systems are kept up-to-date and secure and that the patching process is streamlined, efficient, and compliant with regulatory standards and industry best practices.
+
+## Post-Implementation Environment
+
+The post-implementation environment for OS Security Patching typically includes new systems and processes that implement and support the effective management of updates and patches. These can include:
+
+* New automated patching systems: Super club has implemented an automated patching solution using Ansible and Puppet. Ansible and Puppet have a dedicated virtual machine just for the execution of their playbooks. These VMs have enough system resources that when a patch is triggered, multiple systems can upgrade simultaneously, thus decreasing the patching time. The IT department creates new computer systems in the environment regularly. As these landscapes grow, the Ansible and Puppet VM boxes will need more resources to keep the patch time to a minimum. The Super Club IT department also made two other VMs to download and update the Red Hat and SUSE Linux patch database. Super Club created virtual machines to host the patch management software and another machine to run the Nessus server. A dedicated Nessus server allows for scheduled vulnerability scans across the entire network.
+* New processes: Super Club developed new processes to support the patching process, such as automated testing and validation procedures, incident response procedures, and monitoring and reporting processes. These processes are critical for ensuring that necessary updates enter the environment before the hack occurs. The auditing process must be transparent and accountable for the external auditors to view and approve.
+* Network diagrams: Super Club created Network diagrams to provide a visual representation of the patch management infrastructure, including the systems and devices that are involved in the patching process, such as servers, workstations, and network devices. These diagrams can help to identify potential vulnerabilities and bottlenecks in the network and to develop effective mitigation strategies.
+* Automation: Developing automation tools and scripts streamlines identifying, testing, and deploying updates and patches. Automation includes determining which systems require updates and patches, running the tests and validating the updates and patches through a test environment framework, and automating the deployment process.
+* Compliance: Developing procedures and standards ensure compliance with regulatory standards and industry best practices, such as NIST, ISO, PCI DSS, and HIPAA.
+
+
+## The Efficiency of the Solution
+
+The efficiency of OS Security Patching refers to how well the process implemented of identifying, testing, and deploying updates to the current landscape. Also in scope are how Super Club manages patches, how quickly vulnerabilities are addressed, and how effectively the process minimizes disruption to Super Clubs' business operations.
+
+Super Club has achieved an efficient OS Security Patching process through several means:
+
+* Automation: Automation can streamline identifying, testing, and deploying updates and patches. OS Security Patching automation is determining which systems require updates and patches, automating the process of testing and validating the system in a sandbox, and automating the patch deployment process.
+* Prioritization: Patch implementation should be prioritized based on the level of risk and the potential for a negative impact on the business. Super Club must first address the most critical vulnerabilities. Doing so will secure the client and vendor data, allowing Super Club to maintain a high level of public trust.
+* Testing and validation: Testing a security patch in a production-like mockup can help minimize downtime in the production environment. Rolling back a patch can take time and cause the business to lose revenue.
+* Monitoring and reporting: It is vital for the developers and the business to know the patching status. The patch will render the environments they depend on useless for a period. Having a dashboard or reporting mechanism, such as a percent complete bar that is shared with the employees, customers, and vendors, allows them to plan around the patching activities. Reporting and monitoring aid in the goal of having a process that is transparent and accountable.
+* Compliance: Ensuring compliance with regulatory standards and industry best practices can help to ensure that the patching process is effective and efficient and that Super Clubs' systems are kept up-to-date and secure.
+
+Super Club implemented an efficient OS Security Patching process through automation, prioritization, testing and validation, monitoring and reporting, and compliance with regulatory standards and industry best practices.
+
+## Analysis of New Data
+
+Automated OS Security Patching can have a positive impact on business processes in several ways:
+
+* Increased security: Automated OS Security Patching helps to ensure that systems are kept up-to-date and secure by addressing known vulnerabilities in the operating system and its components. By automatically identifying, testing, and deploying updates and patches, Super Club can reduce the risk of security breaches and protect its systems from potential cyberattacks.
+* Improved compliance: Automated OS Security Patching can also help Super Club to maintain compliance with regulatory standards and industry best practices. By automating the process of identifying, testing, and deploying updates and patches, Super Club can ensure that its systems are secure, which can help to demonstrate compliance with regulatory requirements.
+* Increased efficiency: Automated OS Security Patching can also increase efficiency by streamlining the process of identifying, testing, and deploying patches. Automation can minimize the time and resources required to manage patches, which helps minimize disruptions to business operations and reduce the labor force and labor costs.
+* Better incident response: Automated OS Security Patching can also help Super Club quickly detect, respond to, and mitigate cybersecurity incidents by providing a systematic approach to identifying and addressing vulnerabilities.
+* Improved change management: Automated OS Security Patching can also enhance the change management process by providing a clear and accurate record of all the updates and patches applied to the systems, which can help to improve the overall security posture of Super Club.
+
+New data can positively impact business processes by increasing security, improving compliance, efficiency, incident response, and change management. These benefits can contribute to the overall security posture of Super Club, minimize disruptions to operations and reduce costs.
+
+## Summative Evaluation Plan
+
+The summative evaluation plan implemented during the OS Security Patching project included a plan of action and milestones to measure the effectiveness and efficiency of the automated patching process. The program included metrics to evaluate the overall security posture of Super Club, compliance with regulatory standards, and the impact of the patching process on business processes. Here are a few elements that the summative evaluation plan included:
+
+* Plan of Action: The plan of action for Super Club included a detailed description of the objectives, strategies, and tactics used to evaluate the effectiveness and efficiency of the patching process. The plan included the roles and responsibilities of different stakeholders, timelines, and budgets.
+* Metrics: Super Club developed metrics to evaluate the effectiveness and efficiency of the patching process. These metrics included the percentage of addressed vulnerabilities, the time required to patch systems, the number of incidents before and after patching, and the number of compliance violations.
+* Milestones: Super Club established milestones that tracked the progress of the patching. These milestones included critical dates for deploying updates and patches, conducting testing and validation, and reporting on the status of the patching process to the stakeholders.
+* Post-implementation review: Super Club conducted a review after the patching process to evaluate its overall security posture, compliance with regulatory standards, and the impact of the patching process on business processes. This review included feedback from stakeholders, an analysis of metrics, and a discussion of improvements that Super Club would include in future iterations of the patching process.
+* Continuous monitoring and improvement: The patching process did not end with the installation of the patch in the production environment. Continuous monitoring is regularly reviewing the metrics and identifying areas for improvement, updating the plan of action and milestones, and incorporating feedback from stakeholders.
+
+The summative evaluation plan for Super Club included a plan of action and milestones, metrics, and post-implementation review to evaluate the effectiveness and efficiency of the patching process, the overall security posture of Super Club, compliance with regulatory standards, and the impact of the patching process on business processes, and a continuous monitoring and improvement process.
+
+## Control Deficiency Analysis
+
+Control deficiency analysis is a process used to identify and evaluate potential weaknesses or gaps in the controls that are in place to protect systems and data from security threats. In Super Clubs' automation of OS Security Patching, a control deficiency analysis can help identify areas where the current patching process may be inadequate, or additional controls are needed to protect systems from vulnerabilities.
+
+A control deficiency analysis can identify several areas where the current OS Security Patching process may be inadequate such as:
+
+* Lack of Automation: Automation can ensure that updates and patches are applied promptly and effectively and that the process is transparent and accountable. A control deficiency analysis may identify a lack of automation in the patching process, which could leave systems at risk and prone to hacking through unpatched vulnerabilities.
+* Prioritization: Prioritizing updates and patches based on the level of risk and the potential impact on Super Club can identify the order in which the patches must be applied in the landscape. The goal is to remediate the most critical vulnerabilities first. A control deficiency analysis may identify a lack of prioritization in the patching process, which could leave systems at risk.
+* Testing and validation: Testing and validating updates and patches before deploying to production systems can minimize the risk of introducing software defects, which can minimize disruptions to business operations. A control deficiency analysis may identify a lack of testing and validation in the patching process. A lack of testing can put the production environment at risk when errors are not found and fixed before they are introduced to production environments.
+* Monitoring and reporting: Monitoring and reporting on the patching progress can ensure that updates and patches are deployed in a timely and effective manner and that the process is transparent and accountable. A control deficiency analysis may identify a lack of monitoring and report in the patching, which could leave Super Club employees unaware of the status of their systems and unable to detect and respond to vulnerabilities promptly.
+* Compliance: Ensuring compliance with regulatory standards and industry best practices can help to ensure that the process is effective and efficient and that Super Clubs' systems are secure. A control deficiency analysis may identify that the patching process is not compliant with regulatory standards and industry best practices.
+* Lack of incident response: An incident response plan developed to deal with security incidents that may arise due to a missed patch or a zero-day exploit. A control deficiency analysis may identify a lack of an incident response plan, which could prevent Super Club from detecting, containing, and mitigating security incidents.
+* Insufficient documentation: Proper documentation of the patch management policy, testing and validation procedures, incident response plan, monitoring, and reporting functions are vital to ensure compliance and continuity of the process. A control deficiency analysis may identify a need for proper documentation, which could lead to inconsistencies and auditing deficiencies.
+* Limited scope: A control deficiency analysis may identify that the scope of the patching is limited, which could leave systems and devices outside of the scope and leave them at risk of being hacked.
+
+Control deficiency analysis can help identify areas where the current Super Club process may be inadequate. Identifying and addressing these deficiencies can help Super Club to improve the effectiveness and efficiency of their patching.
+
+## Post-Implementation Risks
+
+Post-implementation risks of OS Security Patching refer to the potential negative impacts that can occur after the patching process has been implemented. These risks can include the following:
+
+* Compatibility issues: After applying updates and patches, systems may experience compatibility issues with other software or hardware. These issues can lead to system crashes, data loss, or application failures.
+* System downtime: Applying updates and patches can cause systems to be taken offline, leading to system downtime. Downtime can significantly impact business operations, mainly if systems are critical to Super Clubs’ operations.
+* Lack of testing: If updates and patches are not adequately tested before deployment, they may cause system crashes, data loss, or other problems. Lack of testing can lead to significant disruptions to the business operations of Super Club and could result in the need for additional resources and costs to fix the issues.
+* Configuration errors: Applying updates and patches to systems can lead to configuration errors if not applied correctly. Configuration errors can cause systems to malfunction or become less secure.
+* Limited scope: If the scope of the patching process is limited, systems and devices outside of the scope may remain vulnerable to security threats.
+* Lack of incident response plan: if there is no incident response plan in place, Super Club may need help to detect, contain, and mitigate security incidents that may arise due to a missed patch or a zero-day exploit.
+
+To mitigate these risks, Super Club can develop a comprehensive plan of action that includes the following:
+1. Regularly testing updates and patches before they are deployed to production systems.
+2. Prioritizing updates and patches based on the level of risk and potential impact
+3. Automating the process of applying updates and patches to minimize disruptions to Super Club operations
+4. Ensuring compliance with regulatory standards and industry best practices
+5. Continuously monitoring and reporting on the progress of the patching process.
+6. Having an incident response plan in place to quickly detect, respond to, and mitigate cybersecurity incidents
+7. Documenting patching, testing and validation procedures, incident response plan, monitoring and reporting functions, and more.
+8. Ensuring that the scope of the patching process is comprehensive and includes all systems and devices.
+9. Continuously assessing and improving the patching process to identify and address new risks and vulnerabilities.
+10. Having a proper disaster recovery and a business continuity plan in place to minimize the impact of system downtime or data loss.
+
+By implementing these mitigation strategies, Super Club can reduce the likelihood and impact of post-implementation risks and ensure that its systems are functional. Additionally, regular review, testing, and improvement of the automated patching process can help Super Club to stay ahead of emerging threats and vulnerabilities.
+
+The likelihood of a risk occurring after applying the OS Security Patch is dependent upon a variety of factors:
+
+1. The complexity of the patch.
+2. The quality of the testing and deployment process.
+3. The specific environment where the patch is applied.
+4. The likelihood of a risk occurring can be lessened by thoroughly testing the patch in a sandbox environment or using a small subset of production systems. Testing helps identify and address any issues that may arise before applying the patch to all systems.
+5. The deployment process should be well-planned and executed by trained Super Club staff. The deployment plan should include patching the vulnerable systems and designating who will be responsible for the deployment. In conjunction with the project management office, the Super Club Linux Administration team will be responsible for reducing risk and releasing the patches into the Super Club landscape.
+
+However, even with thorough testing and a well-executed deployment process, there is still a risk that issues may arise after the patch is applied. For example, a patch may cause compatibility issues with other software or cause unexpected changes to the system's performance.
+
+It is essential to have a post-deployment verification process that monitors the patches and verifies their entry into the production environment. Verification will check for any issues the patches may have caused. With the proper monitoring and maintenance, the organization can quickly detect and fix any issues that may arise after the patch is applied, reducing risk in the production environment. Super Club must have a risk mitigation plan to take care of the risks when patching introduces risk into the production environment.
+
+
+## Meeting Stakeholder Needs
+
+OS Security Patching meets the needs of various stakeholders by addressing additional security, compliance, and operational requirements.
+
+IT operations and security teams: These teams are responsible for managing systems, networks, and data. The teams’ main goal is to secure the environment and allow the business to function. Automated OS Security Patching can meet these needs by streamlining the process of identifying, testing, and deploying updates and patches to the business environment. Also, by providing visibility into the status of systems and vulnerabilities.
+
+* Compliance teams: Compliance teams ensure that Super Clubs’ systems and processes comply with regulatory standards and industry best practices. The Compliance Team needs to confirm that the patching process complies with regulatory requirements and that the machines are secure. Automated OS Security Patching can help meet these needs by automating the process of identifying, testing, and deploying updates and patches and providing visibility into the status of systems and vulnerabilities.
+* Business leaders: Business leaders are responsible for the overall success of Super Club and for ensuring that business operations are not disrupted by security incidents or system downtime. Their needs include ensuring that systems are functional and secure and that the patching process is efficient and effective, with minimal disruption to business operations. Automated OS Security Patching can meet these needs by streamlining the process of identifying, testing, and deploying updates and patches, providing visibility into the status of systems and vulnerabilities, and minimizing downtime.
+* Customers: Customers expect Super Clubs’ systems and data to be secure and their personal information to be protected. Automated OS Security Patching can help meet these needs by reducing the likelihood of security incidents and data breaches and ensuring customers’ data protection.
+
+
+## Analysis of Changes on Stakeholders
+
+The automation of OS Security Patching can significantly impact various stakeholders within Super Club. Below are a few examples it can affect different stakeholders:
+
+* IT staff: Automating OS Security Patching can significantly reduce the time and effort required to manage the patching process, freeing up Super Club IT staff to focus on other tasks. However, automating OS Security Patching can also shift the IT staff’s responsibilities and roles, leading to the need for retraining or re-skilling.
+* Business owners: Automating OS Security Patching can help to minimize the disruption to business operations caused by patching, allowing patches to be applied during non-business hours or with minimal impact on end-users. Patching during off hours can lead to increased business productivity and customer satisfaction.
+* End-users: Automating OS Security Patching can increase system stability, reliability, and security, resulting in a more seamless and efficient user experience. However, end-users may also experience some inconvenience if their systems need to be rebooted or if their access to specific applications is temporarily restricted during the patching process.
+* Management: Automating OS Security Patching can quickly help Super Club meet regulatory and compliance requirements related to patching. The automaton can help to reduce the risk of regulatory fines and reputational damage. However, automating OS Security Patching can also require significant technological, personnel, and training investments.
+* Third-party vendors: Automating OS Security Patching can help Super Club to manage and maintain large and complex IT infrastructures more easily. Automation can lead to increased efficiency and cost savings for third-party vendors. However, automating OS Security Patching can require third-party vendors to comply with the same patch management policies and procedures as Super Club.
+
+Overall, automating OS Security Patching can bring many benefits to Super Club but can also lead to changes affecting different stakeholders differently. It is essential to consider these changes when planning and implementing OS Security Patching and to involve the relevant stakeholders.
+
+
+## Post-Implementation Maintenance Plan
+
+A post-implementation maintenance plan for OS Security Patching is a plan that outlines the ongoing activities that are required to ensure the continued effectiveness and efficiency of the patching process. The maintenance plan should include the following elements:
+
+Patch Management Policy: The patch management policy should be reviewed and updated regularly to ensure it remains in line with regulatory requirements, industry best practices, and Super Clubs’ risk management framework.
+Vulnerability Management: Super Club should conduct regular vulnerability assessments and penetration testing to identify and prioritize vulnerabilities that must be addressed. Assessments will ensure that the most critical vulnerabilities are addressed first.
+Regular updates and patches: These should be applied to systems to address known vulnerabilities and ensure that systems are kept up-to-date and secure.
+Testing and validation: Updates and patches should be tested before being deployed to production systems to minimize the risk of introducing new bugs or compatibility issues.
+Monitoring and reporting: The patching process should be monitored and reported regularly to ensure that updates and patches are being deployed promptly and effectively and that the process is transparent and accountable.
+Incident response: The incident response plan should be reviewed and updated regularly to ensure that it remains effective in dealing with security incidents that may arise due to a missed patch or a zero-day exploit.
+Training and awareness: Regular training and awareness programs should be conducted to ensure that employees know the importance of patching and how to identify and report vulnerabilities.
+Continual assessment and improvement: The patching process should be continuously assessed and improved to identify and address new risks and vulnerabilities and to ensure that Super Clubs’ systems are kept up-to-date and secure.
+A post-implementation maintenance plan for OS Security Patching should include elements such as regularly reviewing and updating the patch management policy, conducting regular vulnerability assessments, applying regular updates and patches, testing and validating updates and patches, monitoring and reporting on the progress of the patching process, reviewing and updating incident response plan, providing regular training and awareness programs, and continually assessing and improving the patching process.
+
+Cybersecurity Domain
+
+OS Security Patching addresses several cybersecurity domains, which include:
+Inventory of all third-party connections: Patch management must have an accurate inventory to patch all the devices and items connected to the network. An inventory can help Super Club to identify and track the software, hardware, and firmware assets not on their network but held by subcontractors. By managing this inventory, it can aid external dependency management and keep the environment secure.
+Vulnerability Assessments: Patching helps Super Club to identify and prioritize vulnerabilities in their systems. By applying updates and patches, Super Club can address known vulnerabilities and reduce the risk of security incidents.
+Cyber Incident Response: Patching helps Super Club to detect, contain, and respond to security incidents. By applying updates and patches, Super Club can reduce the likelihood of security incidents and minimize the impact of incidents that do occur.
+Vulnerability or Patch Management Policies and Procedures: OS Security Patching is an automated process that helps Super Club to identify, test, and deploy updates and patches efficiently and effectively. Automated OS Security Patching can help Super Club minimize the time and resources required to manage updates and patches and improve system status and vulnerability visibility.
+Management Reports on Cyber Intelligence: OS Security Patching helps Super Club to ensure that its systems and processes comply with regulatory standards and industry best practices. These reports are then shared with the management staff. By applying updates and patches, Super Club can demonstrate compliance with regulatory requirements and industry best practices.
+Data Loss Prevention Analysis: OS Security Patching helps Super Club to protect its data by reducing the likelihood of security incidents and data breaches. By applying updates and patches, Super Club can ensure that systems are kept up-to-date and secure, which can help to protect sensitive data.
+It is important to note that OS Security Patching is just one aspect of the cyber security domains, and it should be integrated with other security measures such as firewalls, intrusion detection and prevention systems, encryption, and security information and event management (SIEM) plans to create a comprehensive security strategy.
+
+Original Artifact
+Many policies and procedures were created during the OS Security Patching Project.
+Below is an excerpt of the security policy dealing with patch management:
+
+
+SUPER CLUB PATCH MANAGEMENT POLICY
+
+OS Patch Management Policy
+
+This policy is intended to be a living document and will be reviewed and updated regularly to ensure its effectiveness and relevance to Super Club.
+
+Purpose:This policy aims to ensure the security and integrity of the Super Clubs’ systems by proactively identifying and addressing vulnerabilities through the application of patches consistently and efficiently.
+
+Scope:This policy applies to all systems and devices owned or operated by Super Club, including servers, workstations, laptops, and mobile devices.
+
+Policy:
+Vulnerability Assessment: Super Club will conduct regular vulnerability assessments to identify vulnerabilities in its systems. These assessments will be conducted using industry-standard tools and techniques and prioritized based on the vulnerabilities’ potential impact.
+Patch Testing: Patches will be tested in a lab or production environment using a small subset of systems before being deployed to the entire Super Club production environment. Testing will help to minimize the risk of issues caused by the patches.
+Deployment Planning: Super Club will develop a detailed deployment plan to identify which systems need to be patched when the patches will be deployed, and who will be responsible for the deployment.
+Deployment: Patches will be applied to the systems promptly, using tools such as Ansible or Puppet to automate the process.
+Post-Deployment Verification: Super Club will monitor the systems after the patches have been applied to ensure that the patches have been used correctly and to check for any issues caused by the patches.
+Reporting: Super Club will report on the patching process, including the number of vulnerabilities that have been addressed, the number of patches that have been deployed, and any issues that have been encountered.
+Maintenance: Super Club will maintain the systems and the patching process to ensure they remain secure and compliant over time.
+Compliance: Super Club will comply with relevant regulatory and compliance requirements related to patching.
+
+Responsibilities:
+Super Club IT staff are responsible for conducting vulnerability assessments, testing patches, deploying patches, monitoring systems after patches have been applied, and reporting on the patching process.
+Super Club IT management staff oversees the patching process, including developing and maintaining the deployment plan and ensuring compliance with relevant regulatory and compliance requirements.
+End-users are responsible for keeping their devices updated with the latest patches.
+
+Exceptions: Exceptions to this policy may be granted by the Super Club IT management staff on a case-by-case basis, but only after a thorough risk assessment has been conducted.
+
+Enforcement: Violations of this policy may result in disciplinary action, including termination of employment from Super Club.
+
+Review: The Super Club IT management staff will review this policy annually to ensure its effectiveness and relevance to Super Club. The review process will include an assessment of the patching process, including the number of vulnerabilities that have been addressed, the number of patches that have been deployed, and any issues that have been encountered. The review will also consider technological changes, regulatory and compliance requirements, and best practices. The policy may be revised and updated based on the study’s results.
+
+Training: All employees of Super Club, contractors, and vendors who have access to Super Clubs’ systems and devices will be required to complete training on this policy, including the importance of patching, the patching process, and their responsibilities under this policy.
+
+Communication: Super Club will communicate this policy to all employees, contractors, and vendors who have access to Super Clubs’ systems and devices and will make it available on its intranet or other internal communication channels.
+Implementation: This policy will be implemented by the Super Club IT management staff and Super Club IT staff, who will ensure that the procedure is followed and that the systems and devices are patched promptly and consistently.
+
+Continuous monitoring: Super Club will monitor and manage all systems and devices constantly to ensure that vulnerabilities are identified and addressed promptly. Monitoring includes regular scanning for vulnerabilities, monitoring for security alerts, and maintaining an inventory of all systems and devices.
+
+Incident response: Super Club will have an incident response plan to quickly and effectively respond to any security incidents. The plan includes identifying and containing the incident, assessing the damage, and restoring normal operations as soon as possible. The incident response plan should also include procedures for reporting and documenting the incident and conducting a post-incident review.
+
+Third-party vendors: Super Club will ensure that third-party vendors and contractors that have access to the Super Clubs’ systems and devices comply with the same patch management policies and procedures as Super Club. Compliance includes regular vulnerability assessments, patch testing and deployment, and incident response planning.
+
+Communication with other teams: Super Club will ensure that the Super Club IT security team is in sync with other groups, such as development, operations, and legal, to ensure that patching is implemented in a way that does not interfere with normal business operations.
+
+Conclusions: By proactively identifying and addressing vulnerabilities through patches, Super Club can reduce the risk of security breaches and improve the overall security posture. This policy should be regularly reviewed and updated to reflect changes in technology, regulatory and compliance requirements, and best practices.

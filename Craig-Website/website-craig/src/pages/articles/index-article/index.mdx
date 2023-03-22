@@ -1,0 +1,306 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import westernGov from '../wgu.png'
+
+export const meta = {
+  author: 'Craig Willey',
+  date: '2023-01-23',
+  title: 'Cyber Security Capstone Part 1',
+  description: 'Recently I graduated from Western Governors University in Cyber Security and Information Assurance. Here are the two documents that I wrote for the final project of that program.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+In my Capstone project at Western Governors University, I emphasized the significance of OS patching for Super Club, a fictional company. Through thorough research and analysis, I demonstrated the benefits of a proactive approach to OS patching, including improved security, better performance, and reduced downtime. I graduated last January and manage the Patch Compliance for the Costco Wholesale Website, Membership, and Payroll systems. I am applying my knowledge and skills to ensure the systems are always up-to-date and protected from potential cyber threats.
+
+<Image src={westernGov} alt="Western Governors Logo" />
+
+In part one of my capstone I introduce the topic and the issues that are faced in the fictional compay Super Club.
+
+## Super Club: Automation of OS Security Patching
+
+The patch management structure currently used by the global company Super Club is time-consuming. Automating the patching cycle will use fewer human resources and enable a shorter patch cycle. Completing this change will allow Super Club to respond to emerging security threats sooner than the current process permits.   
+
+In the year 2022, there were at least 66 Zero Day threats emerged. (Nclose) According to Cobalt Security, the year 2022 saw there were 2,200 security attacks every single day. (Cobalt) Patching Fatigue is often listed as one of the top complaints among security managers (Syxsense), with the number of patch releases for OS and Application levels growing yearly. According to the security consultant agency, Rapid7, unpatched connected systems are among the top entry points of hackers, even though a patch that would have prevented the unauthorized entry was released months or even years ago. (Rapid7) Unpatched systems leave businesses vulnerable to attacks.
+
+Super Club has computers in each of the warehouses, and patching for those machines is taken care of by the windows team using SCCM (System Center Configuration Manager). The Microsoft boxes are automatically patched every Patch Tuesday and are not in this project's scope. Microsoft Azure Cloud and HP Superdome Flex Servers are providing the Infrastructure for Super Club's virtual machines in the cloud and on-premise and, at the time of this writing, reside in three worldwide data centers. There are more than 900 VMs in the USA, 600 plus in Spain, and just shy of 500 VMs in China. These virtual machines are running a mix of Red Hat Enterprise Linux and SUSE Linux due to the needs of the applications they support. Patching every one of these 2000-plus boxes requires ample time and staffing to complete the task. With that many Virtual Machines connected to the internet spread around the globe, it leaves a large attack surface when a hacker discovers a vulnerability. There are many ways a Virtual Machine could be compromised daily, and many of these vulnerabilities are shared among dark web circles so more bad actors can exploit the flaw as quickly as possible. Patch Management is applying security fixes and updates to the software that prevent malicious individuals from using the security flaw. As Super Club grows, the number of required systems to support the business also grows. The process will require more and more personnel to remain compliant unless Super Club begins automating the patch management process.
+Not only does a competent patch management program increase public trust, but the Sarbanes-Oxley Act (also known as SOX) requires it. The Sarbanes-Oxley Act in Section 404 (SEC) deals directly with vulnerability management. To not be labeled deficient, Super Club must demonstrate a patch management system that is compliant, timely, and efficient. Having private data exfiltrated, having critical systems fail, or paying the fines of a sox audit is nothing that Super Club wants to happen. An automated patch management system is crucial to the company's overall success.
+
+Operating System (OS) patch management identifies and applies updates to an organization's computer systems to fix known vulnerabilities and prevent potential security breaches. In today's digital age, where technology is constantly evolving, and cyber-attacks are on the rise, the security department of Super Club cannot overstate the importance of OS patch management.
+
+In July 2022, Super Club had a deficiency as a part of its audit found by the external audit company Deloitte. Auditors found that client-facing systems did not have the Zero Day vulnerability LOG4J patched within the 30-day timeframe. The root cause of this problem was not that Super Club needed to be aware of the vulnerability but rather that the teams could not patch every system in the company fast enough to remain compliant. Currently, the patch cycle takes three months, with Super Club patching all the hosts in the system four times a year. However, the four-times-a-year cycle does not include when a Zero Day vulnerability appears, and the patch cycle must start from the beginning. The Information Security department of Super Club follows the OWASP security guideline that the IT Staff must patch all vulnerabilities with a CVSS score of 9.0 (NIST),  completing the task within 30 days of discovery. Ensuring that each Virtual Machine and physical machine landscape is secure and operational is vital to support business functions. The patch management process that is currently in place must change; it must be able to respond to the growing number of threats without impacting the business. The goal is to reduce downtime yet remain compliant.
+
+One of the primary reasons for the importance of OS patch management is the prevention of security breaches. Cybercriminals are always looking for ways to exploit computer system vulnerabilities to gain unauthorized access to sensitive information. By regularly patching and updating their systems, Super Club can ensure that they are protected against known vulnerabilities, making it much more difficult for cybercriminals to succeed.
+For example, suppose a software vendor releases a patch for a specific vulnerability. Releasing a patch has a twofold effect. The vendor will notify Super Club of the error, but cybercriminals can also search the database and know the hosts available to exploit. They are making it easier for hackers to target unpatched systems and gain access to sensitive information.
+
+Another vital aspect of OS patch management is the prevention of data loss. Many software updates include fixes for bugs and glitches that can cause data corruption or loss. By applying these updates, Super Club can ensure that their data is protected and that their systems are running smoothly. Updates are significant for Super Club as they rely heavily on technology to conduct their business. The Super Club is the steward of a lot of sensitive data that needs to be protected, and losing any of it can cause severe damage to its reputation and business operations.
+
+In addition to protecting against security breaches and data loss, OS patch management can help Super Club comply with industry regulations. Many retail industries have strict data security and privacy rules, and failure to comply can result in significant fines and penalties. By keeping their systems up-to-date, Super Club can ensure that they comply with these regulations and avoid costly penalties. For example, suppose Super Club does not guard digital information about its employees' FMLA or Injury Leave. They must comply with the Health Insurance Portability and Accountability Act (HIPAA) regulations. In that case, Super Club could face hefty fines and penalties.
+Patch management also helps keep systems updated with the latest features and functionalities. Patching can help Super Club work more efficiently and productively and also help with better customer service.
+
+However, implementing an effective OS patch management program will challenge the Super Club IT department. Keeping track of all the unpatched software and systems can be time-consuming and complex. Additionally, testing and deploying updates can disrupt business operations and cause downtime if not done correctly. Therefore, this project aims to help Super Club create a well-designed patch management plan that includes policies, procedures, and tools for identifying, testing, and deploying updates promptly and efficiently.
+
+OS patch management is critical to Super Clubs' cybersecurity strategy. By regularly patching and updating its systems, Super Club can protect against security breaches and data loss and ensure compliance with industry regulations. It is an essential practice for any retail organization that wants to secure its digital assets and protect itself from the many risks of the digital world. Super Club must invest in the right tools and resources to effectively manage its patch management program to stay protected against ever-evolving cybersecurity threats.
+
+## Stakeholders
+
+Super Clubs' OS patching stakeholders can significantly influence the project's objectives and outcomes. Each stakeholder group has different priorities and needs, and their input can shape the direction and scope of the current or future patching cycles. They can divide into internal and external stakeholders, each with unique roles and responsibilities. Internal stakeholders are those who are directly involved in the project and are typically employees of Super Club. Internal stakeholders include project managers, team members, and department heads. These individuals have a high level of implementation involvement and are directly responsible for the success of OS Security Patching. Their needs include clear communication, access to necessary resources, and support from other team members.
+Regarding how the security problem affects internal stakeholders, internal stakeholders are directly responsible for implementing security measures, such as creating and updating security policies and procedures. They are also responsible for maintaining the security of Super Club's information and assets. Furthermore, internal stakeholders are responsible in the eyes of the law if a security breach occurs and need to make restitution for any damages or losses.
+Internal stakeholders significantly influence OS Security Patching's objectives and outcomes as they are directly involved in the implementation and execution of the project. They can provide valuable input on the patching's goals and objectives and offer suggestions for improving automation outcomes. Internal stakeholders can also influence the patching's budget and timeline, as they often provide resource estimates and manage patching timelines.
+External stakeholders are those who are not directly involved in the patch but have an interest or concern in its outcome. Examples of external stakeholders include customers, suppliers, and regulatory agencies. These individuals have a lower level of implementation involvement, and their needs may consist of clear communication, access to necessary information, and support from the Super Club's internal stakeholders.
+Below are some of the key stakeholders in Super Clubs' organization related directly to the automation of OS Security Patching
+
+1. Project Manager: The Project Manager is responsible for planning, executing, and closing the OS patching project. They will have an internal role and need to ensure that the project is completed on time, within budget, and to the satisfaction of all stakeholders. They will also need to ensure that the project aligns with the Super Clubs' cybersecurity initiatives and regulatory compliance. A manual patching process affects the project manager by potentially causing delays, budget overruns, and non-compliance issues. The project manager's primary goal is to balance the needs of all stakeholders.
+2. Security Team: The Security Team is responsible for ensuring the security of the Super Clubs systems. They will have an internal role and need to ensure that the OS patching process is secure and addresses all vulnerabilities. Their input will shape the project's scope and ensure it meets the Super Clubs' security requirements. They will also need to ensure that the systems follow industry standards and Super Clubs policies. Manual patching problems affect the security team by potentially implementing patches incorrectly, causing data breaches, losing sensitive information, and damaging the Super Clubs' reputation.
+3. IT Operations Team: The IT Operations Team manages Super Club's systems. They will have an internal role and need to ensure that the OS patching process does not disrupt the operations of Super Club. They will also need to ensure that the systems are available and functioning correctly after the patching process. OS Security Patching problems affect the IT operations team by potentially causing service disruptions, loss of productivity, and damage to Super Club's reputation. The input of the IT Operations Team will shape future OS Patches and ensure that the patch meets Super Club operational requirements.
+4. End-Users: End-Users are the individuals who use Super Club's systems. They will have an external role and must ensure that the OS patching process does not disrupt their work. They will also need to provide feedback on the systems after the patching completes to ensure that the upgrades are not interfering with their needs. Security problems affect end-users by potentially causing data breaches, loss of sensitive information, and disruption to their scheduled work times. Users' input will shape the scope of OS Security Patching and installing the updates without impeding those using the software or hardware.
+5. Auditors: Auditors are responsible for assessing Super Clubs' compliance with regulatory requirements. They will have an external role and need to ensure that the OS patching process complies with regulatory requirements and that there is an auditable record. Issues with an OS Security Patch pose audit-level issues where an auditor can find potential non-compliance, the loss of sensitive information, or damage to the Super Clubs' reputation.
+6. Regulators: Regulators are responsible for enforcing compliance with regulatory requirements. They will have an external role and must ensure that the OS patching process complies with regulatory requirements such as SOX and PCI-DSS.
+
+Security vulnerabilities that have not been patched directly affect external stakeholders. When hackers steal and share personal information that was given to Super Club, the external stakeholders become a victim. Compromising personal data can have enormous ramifications for Super Club. A security breach could lead to reputational damage and loss of sales and vendors, as external shareholders may lose trust in the company.
+External stakeholders significantly influence the objectives and outcomes of OS Security Patching as they can provide a valuable incentive to maintain a patched, secure, and compliant environment.
+Understanding the roles and responsibilities of each stakeholder can help project managers effectively manage OS Patching and ensure that patch objectives and outcomes are met. Understanding how OS patching affects each stakeholder is crucial for the project manager to direct the patch implementation and mitigate the risks.
+
+## Decision-Making Process
+
+The data used to support decision-making throughout OS security patching can include both existing and additionally collected data.
+
+Existing data that can be used include:
+1. Vulnerability data: This includes information about known vulnerabilities in the operating systems that are being patched. This data can be collected from sources such as the National Vulnerability Database (NVD) or vendor-specific security advisories. Two vendors that are in use in the Super Club environment are Red Hat Enterprise Linux and SUSE Linux.
+2. Asset inventory data: This includes information about the systems and devices that are being patched, including their hardware and software configurations, IP addresses, and locations.
+3. Compliance data: Compliance data includes information about regulatory requirements and industry standards that apply to Super Club and the systems being patched.
+4. Security data: Security data includes information about past security incidents and vulnerabilities discovered in Super Clubs' systems.
+
+Additionally collected data that can be used includes:
+1. Patch testing data: This includes information about the testing done to ensure that the patches do not cause any system issues. Patch testing can include information about the testing environment and the testing results.
+2. Deployment data: This includes information about the deployment of the patches, including the systems that were patched, the patches that were applied, and the date and time of the deployment.
+3. Post-patching data: Post data about the systems after the patches have been applied, including any issues discovered and the systems' status.
+4. Feedback data: This includes end-users and stakeholders' feedback about the systems and the patching process.
+All the data mentioned above can be used to support decision-making throughout the OS security patching process by providing information about the current state of the systems, the present risks, and the impact of the patches on the systems and Super Club. This information can be used to prioritize which patches to apply, plan the deployment of the patches, test the patches, monitor the systems after the patches have been applied, and make any necessary adjustments to the patching process.
+
+Functional and detailed requirements.
+
+The industry-standard methodology for OS security patching design and development is typically based on the concept of a "Patch Management Life Cycle." This methodology is designed to provide a structured and repeatable process for identifying, testing, and deploying patches to address vulnerabilities in operating systems. The critical stages of this methodology include:
+1. Vulnerability Assessment: This stage involves identifying vulnerabilities in Super Club's systems using tools such as vulnerability scanners or manual analysis. This information is used to prioritize which vulnerabilities need to be addressed.
+2. Patch Testing: This stage involves testing the patches to ensure they do not cause any system issues. Patch testing can include testing the patches in a lab or production environment using a small subset of systems.
+3. Deployment Planning: This stage involves planning the deployment of the patches, including identifying which systems need to be patched, when the patches will be deployed, and who will be responsible for the deployment.
+4. Deployment: This stage involves applying the patches to the systems. Deployment can include automating the release of the patches, using tools such as Ansible or Puppet, or manually applying the patches.
+5. Post-Deployment Verification: This stage involves monitoring the systems after the patches have been applied. Verification is used to ensure that the patches have been applied correctly and to check issues caused by patches.
+6. Reporting: This stage involves reporting on the patching process, including the number of vulnerabilities that have been addressed, the number of patches that have been deployed, and any issues that have been encountered.
+This methodology is followed by many Super Clubs and is widely accepted as the industry standard for OS security patching design and development. It provides a structured and repeatable process for addressing vulnerabilities in operating systems and helps Super Club ensure its systems and data security and integrity.
+
+The launch of OS security patching can be a complex process involving several phases and various stakeholders. The critical phases of the rollout include:
+1. Planning and Preparation: This phase involves identifying the scope of the project, developing a project plan, and identifying the resources that will be required. This phase also involves identifying the systems that will be patched and the vulnerabilities that will be addressed. The project management strategy is also defined in this phase as either Waterfall or Agile. Super Club is using an Agile and Scum Methodology and will continue to use these methods during OS Security Patching.
+2. Testing: This phase involves testing the patches in a lab or production environment using a small subset of systems. This helps to ensure that the patches will not cause any issues with the systems before they are deployed widely.
+3. Deployment: This phase involves applying the patches to the systems. Deployment can include automating the deployment of the patches, using tools such as Ansible and Puppet, or manually applying the patches. This project aims to migrate away from manually applying the patches and use Ansible and Puppet for automated patching.
+4. Post-Deployment Monitoring: This phase involves monitoring the systems after the patches have been applied. Monitoring ensures that the patches have been applied correctly and checks for any issues caused by the patches.
+5. Reporting: This phase involves reporting on the patching process, including the number of vulnerabilities that have been addressed, the number of patches that have been deployed, and any issues that have been encountered.
+The criteria used to determine the conclusion of the implementation can vary depending on Super Clubs specific requirements but generally include the:
+* All the vulnerabilities identified in the Planning and Preparation phase have been patched
+* All the systems have been patched without causing any disruption to the business operations
+* All the patches have been tested and have passed the testing criteria
+* All the regulatory and compliance requirements have been met
+* All the end-users have provided positive feedback on the systems after the patching process
+* All the reporting and documentation have been completed.
+The Project management strategy for the implementation can vary depending on Super Clubs preference, but generally, it includes the following steps:
+* Defining the scope of the project
+* Identifying the resources required for the project
+* Developing a detailed project plan
+* Identifying the systems that will be patched and the vulnerabilities that will be addressed
+* Defining the testing and deployment process
+* Identifying the team responsible for the patching process
+* Identifying the stakeholders and their roles
+* Identifying the risks and mitigation strategies
+* Continuously monitor the progress of the project and make adjustments if necessary.
+
+Overall, the launch of OS security patching requires careful planning and coordination to ensure that the patches are applied correctly, that the systems remain available and functional, and that Super Club remains compliant with regulatory requirements. Super Club can ensure its systems, data security, and integrity by following a structured and repeatable process.
+
+## Functional and Detailed Requirements to carry out OS Security Patching
+
+The functional and detailed requirements for OS security patching include the following:
+1. Patch Management Software: Super Club needs a patch management software suite to automate identifying, testing, and deploying system updates and patches. This software should be able to scan systems for vulnerabilities, prioritize vulnerabilities based on their risk level, test and validate updates and patches, and deploy updates and patches to systems. Nessus by Tenable is the selected software security scanner. It will take care of the identification and scanning of vulnerabilities. Puppet will be used to test and deploy the patch on each system. Ansible will be used to run the Puppet configuration code on system boxes simultaneously.
+2. Vulnerability Scanning and Penetration Testing: Super Club needs a vulnerability scanning and penetration testing tool to identify and prioritize vulnerabilities in their systems. This tool should be able to scan systems for known vulnerabilities, identify potential vulnerabilities, and provide detailed information about the vulnerabilities. Nessus has the complete set of tools and reporting capabilities to fulfill all these requirements.
+3. Compliance Management: Super Club must ensure its systems and processes comply with regulatory standards and industry best practices. This requires regular compliance assessments, testing, and monitoring to ensure that systems are kept up-to-date and secure.
+4. Incident Response: Super Club needs an incident response plan to detect, contain, and respond to security incidents. The incident response plan should include procedures for identifying, containing, and mitigating security incidents and for restoring systems to normal operations.
+5. Security Automation and Orchestration: Super Club needs to automate and orchestrate the process of identifying, testing, and deploying system updates and patches. Automation and Orchestration require integrating patch management software, vulnerability scanning and penetration testing tools, and incident response plans.
+6. Data Backup and Recovery: Super Club needs to have data backup and recovery procedures in place to protect data and minimize the impact of security incidents. Backup and Recovery require regular backups of data and procedures for restoring data during a security incident.
+7. Monitoring and Reporting: Super Club needs to have monitoring and reporting procedures in place to track the progress of the patching process and to ensure that updates and patches are being deployed promptly and effectively.
+8. Training and Awareness: Super Club must provide regular training and awareness programs for employees to ensure they know the importance of patching and how to identify and report vulnerabilities.
+The functional and detailed requirements for OS security patching work together to ensure that systems are kept up-to-date and secure and vulnerabilities are identified and addressed. Security incidents must be detected and mitigated quickly.
+
+## Industry-standard methodology guiding OS Patching's design and development
+
+The National Institute of Standards and Technology (NIST) Cybersecurity Framework (CSF) is the industry-standard methodology for guiding the design and development of OS patching. The NIST CSF is a risk-based framework that provides a common language and structure for organizing, implementing, maintaining, and continually improving cybersecurity. The NIST CSF is organized around five core functions: Identity, Protect, Detect, Respond and Recover.
+1. Identify: The first function of the NIST CSF is to identify the assets, vulnerabilities, threats, and impacts relevant to Super Club. Identification includes finding the systems and devices that need to be patched and the vulnerabilities and threats associated with those systems and devices.
+2. Protect: The second function of the NIST CSF is to protect Super Clubs assets, vulnerabilities, threats, and impacts. Protection includes implementing controls and countermeasures to reduce the risk of security incidents, such as applying updates and patches to systems.
+3. Detect: The third function of the NIST CSF is to detect security incidents as soon as possible. This includes monitoring and detection systems to detect security incidents and anomalies, such as intrusion detection systems and security information and event management (SIEM) systems.
+4. Respond: The fourth function of the NIST CSF is to respond to security incidents as soon as possible. This includes implementing incident response procedures to contain and mitigate security incidents, such as the incident response plan.
+5. Recover: The fifth function of the NIST CSF is to recover from security incidents as soon as possible. This includes implementing disaster recovery and business continuity procedures to minimize the impact of security incidents, such as data backup and recovery procedures.
+By following the NIST CSF, Super Club can ensure that they are identifying and addressing vulnerabilities and threats comprehensively and consistently and that they are implementing effective countermeasures to reduce the risk of security incidents.
+
+## OS Security Patching Launch, Phases, and Rollout
+
+The automated OS security patching launch typically includes the following phases of the rollout:
+1. Planning and Preparation: This phase involves identifying the systems and devices that need to be patched, evaluating the risks and benefits of patching, and developing a patch management plan. This phase also includes identifying the resources required for the rollout, such as patch management software (Ansible, Puppet, and Nessus) and IT staff.
+2. Testing and Validation: This phase involves testing updates and patches on a small scale, typically in a test environment, before they are deployed to production systems. This phase also includes evaluating the compatibility of updates and patches with existing systems and applications.
+3. Deployment: This phase involves deploying updates and patches to systems. This phase typically includes scheduling updates and patches, communicating with users and IT staff, and monitoring the rollout progress.
+4. Monitoring and Reporting: This phase involves monitoring the progress of the rollout, identifying and addressing any issues that arise, and reporting on the status of the rollout.
+5. Closeout and Review: This phase involves closing the project, archiving documentation, and reviewing the rollout.
+
+The criteria used to determine the conclusion of the implementation of OS patching include:
+* Achieving the project's objectives and deliverables
+* Meeting the timelines and budget
+* Compliance with regulatory standards and industry best practices
+* Meeting the stakeholders' expectations
+
+The project management strategy for OS patching implementation should include the following:
+* Clearly defined objectives and deliverables
+* Clear roles and responsibilities for all project team members
+* A detailed project plan that outlines the schedule, budget, and resources required for the rollout
+* A system for tracking and reporting on the progress of the rollout
+* A system for identifying and addressing issues that arise during the rollout
+* A system for communicating with stakeholders throughout the rollout
+* A system for conducting a review of the rollout once it is complete.
+
+## Likelihood of Implementation Risks and their impact on OS Security Patching
+
+Implementation risks associated with OS patching can include:
+1. Compatibility issues: There is a risk that updates and patches may not be compatible with existing systems and applications, leading to system downtime and lost productivity. The likelihood of this risk is moderate, and the impact can be significant if not correctly addressed.
+2. Misconfigurations: There is a risk that updates and patches may not be configured appropriately, leading to security vulnerabilities and system downtime. The likelihood of this risk is moderate, and the impact can be significant if not adequately addressed.
+3. Lack of user acceptance: There is a risk that users may not accept or may resist the changes associated with updates and patches, which can lead to resistance to the rollout and lost productivity. The likelihood of this risk is low, but the impact can be significant if not adequately addressed.
+4. Limited resources: There is a risk that Super Club may not have enough resources to implement updates and patches on time, which can lead to delays in the rollout and lost productivity. The likelihood of this risk is moderate, and the impact can be significant if not correctly addressed.
+5. Data loss: There is a risk that updates and patches may cause data loss, leading to lost productivity and reputational damage. The likelihood of this risk is low, but the impact can be significant if not adequately addressed.
+6. Compliance: There is a risk that updates and patches may not comply with regulatory standards such as SOX, HIPPA, and PCI-DSS and industry best practices such as OWASP, which can lead to fines and reputational damage. The likelihood of this risk is moderate, and the impact can be significant if not adequately addressed.
+
+The likelihood of implementation risks associated with OS patching can vary, and the impact of these risks can also vary. It is essential to carefully evaluate the risks and impacts associated with OS patching and implement mitigation strategies to reduce the likelihood and impact of these risks. Mitigation strategies can include testing updates and patches in a test environment before deploying them to production systems, implementing incident response and disaster recovery procedures, providing user training and awareness programs, and conducting regular compliance assessments and audits. Additionally, it is crucial to have a robust project management strategy that includes a system for identifying and addressing issues that arise during the rollout, a system for communicating with stakeholders, and a system for conducting a review of the rollout once it is complete.
+
+Another vital factor to consider is to have a well-defined incident response plan in place that addresses the likelihood of a security incident, which may happen due to a patching failure or misconfiguration, which can help in minimizing the impact and recovery time.
+
+It is also essential to have a continuity plan in case of extended downtime, which may happen during the implementation of patches, to minimize the impact on the business operations.
+
+Overall, implementing OS Security Patching can significantly impact Super Clubs' security posture, operations, and compliance. It is crucial to evaluate the risks, impacts, and likelihoods associated with OS Patching and to implement mitigation strategies to reduce the likelihood and impact of these risks.
+
+## Describe the training approach to OS Security Patching, including the audience, delivery, content, and duration
+
+OS patching is a crucial process for maintaining the security and integrity of computer systems, and training is an essential aspect of ensuring that employees can effectively implement and manage OS patching within Super Club. The audience for OS patching training should include all employees responsible for managing and implementing OS patching within Super Cub. Employees include the IT organization, system administrators, network administrators, and other technical staff responsible for maintaining Super Club's computer systems. It is also important to consider providing training for non-technical staff who have access to the systems, such as end-users, to raise awareness of the importance of OS patching and their role in finding and reporting errors once an upgrade has occurred.
+
+The delivery of OS patching training can take various forms, depending on Super Club's specific needs and resources. The training can be delivered in person, online or virtual classes, or through self-paced tutorials. The key is to choose a delivery method that is most appropriate for the audience and that allows for interactive and hands-on learning.
+
+The content of OS patching training should cover a range of topics, including the industry-standard methodology guiding OS patching design and development, the OS patching automated process, including all phases of the patching cycle, the criteria used to determine the conclusion of successful patching, and the OS patching management strategy for implementation. It should also cover the risks associated with OS patching and best practices for managing them.
+
+The duration of OS patching training will depend on the complexity of the topics covered and the audience's experience level. The training can be delivered in one full-day session or several shorter sessions. It is essential to consider the staff's schedule and choose a duration most appropriate for the audience.
+
+Regular training sessions should be scheduled to keep the staff updated and to ensure the security of Super Club's systems.
+
+## Required Resources
+
+Executing OS Security Patching phases requires various resources, including personnel, hardware, and software.
+
+The first resource required for executing the OS Patching phases is personnel. Resources also include the IT staff and system administrators responsible for identifying and applying patches and any other technical staff who may be involved in the process. Additionally, non-technical staff, such as end-users, play a role in the acceptance process. The personnel cost will vary depending on Super Club's size and the number of staff involved. As Super Club expands, it will need to factor in these costs with each growth.
+
+The second resource required for executing the OS Patching phases is hardware. Hardware includes the computer systems and servers that need to be patched and any additional hardware that may be required for testing and monitoring the patches. At least one box per region is needed for each Nessus Server, Ansible Tower, Red Hat Tower, and SUMA Server. A total of four per region. The cost of the remaining hardware will vary. Cost also depends on the number and type of systems that need to be patched.
+
+The third resource required for executing the OS patching phases is software. The software includes patch management software and any other software that may be required for testing and monitoring the patches. Super Club will use Nessus, Ansible, Azure Dev Ops, and Puppet. The funding for this project includes the following licensing fees. Puppet $120 per month (Puppet) Ansible Tower Enterprise $1083 per month (Ansible) Azure Dev Ops $6,000 per year for 30 users (Azure). Additional costs for other software will vary depending on the type of software and the number of licenses required and will be brought before the management team before the contract is signed for approval on the spend.
+
+A vulnerability scanning tool is the fourth resource required for executing the OS patching phases. This will help identify the systems and applications that need to be patched. The cost of vulnerability scanning tools like Nessus Enterprise cost  $7490 per year (Tenable)
+
+In summary, executing the OS patching phases requires various resources, including personnel, hardware, software, and a vulnerability scanning tool. The cost of these resources will vary depending on Super Club's size and specific needs. Super Club can obtain these resources from IT vendors, service providers, or open-source alternatives. It is important to budget accordingly and assess the costs over time, especially regarding personnel and software, since they are recurring costs.
+
+## Timelines and Milestones
+
+Estimating the projected timeline for OS Security Patching is essential in ensuring that the process is completed promptly and efficiently.
+1. Assessment: The assessment phase is the first step in the OS Patching process. This phase aims to identify the systems and applications that need to be patched. This phase is expected to take 1-2 weeks and involve the IT staff and system administrators.
+2. Planning: The planning phase is the next step in the OS patching process. This phase aims to develop a patching plan, including timelines, resource requirements, and risk mitigation strategies. This phase is expected to take 1-2 weeks and involve the IT staff and system administrators.
+3. Testing: The testing phase is vital in the OS patching process. This phase aims to test the patches to ensure they will not cause any issues with existing systems. This phase is expected to take 2-3 weeks and involve the IT staff and system administrators.
+4. Deployment: The deployment phase is the next step in the OS patching process. This phase aims to deploy the patches to the targeted systems. This phase is expected to take 2-4 weeks and involve the IT staff and system administrators.
+5. Monitoring: The monitoring phase is the final step in the OS patching process. The objective of this phase is to monitor the systems to ensure that the patches were successful and that no issues have arisen. This phase is expected to take 2-3 weeks and involve the IT staff and system administrators.
+
+Super Club's schedule and priorities determine the start date for the OS patching process. The end date for the OS patching process will depend on the Super Club fiscal year calendar and the number of patches that need to be applied to the systems. There might be a chance that none of the vulnerabilities apply to applications or operating system versions in the Super Club landscape. The resources assigned to each task will depend on Super Club's specific needs and the patches' complexity.
+It is important to note that this is an estimated timeline, and each phase's actual duration may vary depending on Super Club's specific needs. Additionally, there should be a continuity plan in case of any unexpected delays or issues arising during the process. Furthermore, regular monitoring and testing should be part of the ongoing process to ensure the systems' security.
+It is important to note that the projected timeline for OS patching is just an estimation and the system will be patched corresponding to the needs of the business. Patches will not begin and end with shutting down vital business systems in the middle of business hours, but rather that the timing of the patch must be performed during the opposite hours of the business. Actual duration will vary with the number of systems that need to be patched, the complexity of the patches, and the availability of resources.
+
+Milestones in OS security patching are significant events or achievements that mark the progress of the patching process and indicate that the project is on track. They are typically used to measure the completion of a specific task or phase of the project and serve as a means of monitoring progress and making adjustments as needed.
+
+At the end of each "Patch Management Life Cycle" phase, the business should be notified of its completion. This lifecycle was mentioned in the Functional Requirements section but will be summarized here to show their use as milestones for project tracking.
+1.Vulnerability assessment
+2. Patch testing
+3. Deployment planning
+4. Deployment
+5. Post-deployment monitoring
+6. Reporting
+7. Compliance and regulatory requirements
+8. End-user feedback
+9. Maintenance
+
+These milestones can help organizations track progress, keep stakeholders informed, and make any necessary adjustments to the patching process.
+
+## Evaluation Framework
+
+An evaluation framework is a crucial component in assessing the success of the OS patching project. It provides a structured approach for evaluating the project's outcomes and identifying areas for improvement.
+
+The evaluation framework will be based on three main components:
+
+Performance metrics are quantitative measures that will be used to assess the project's success. Examples of performance metrics for OS patching include:
+* The number of systems that were successfully patched.
+* The number of vulnerabilities that were addressed.
+* The time it took to complete the patching process.
+
+Quality metrics: These measures will be used to assess the quality of the patching process. Examples of quality metrics for OS patching include:
+* The number of issues that were identified during the rollout.
+* The number of patches that were rejected or caused problems.
+* The overall impact of the patch on Super Club's systems.
+
+Stakeholder feedback: This qualitative measure will assess the project's success. Stakeholder feedback will be collected through surveys, interviews, and focus groups to evaluate the effectiveness of the patching process and the satisfaction of stakeholders, including IT staff and end-users.
+
+The evaluation framework will be used to regularly evaluate the project's success, such as at the end of each phase and the end of the project. The evaluation results will be used to identify areas for improvement and make adjustments to the project plan as needed.
+
+Formative and summative testing can also be used as an evaluation framework for OS Patching. They provide a way to evaluate the effectiveness of the patches and identify any issues they may cause.
+
+Formative testing is an ongoing process used to evaluate the effectiveness of the patches during the development and deployment phases. It is a way to identify and address issues before they become significant problems. The formative test plan for OS patching includes the following procedures and tools:
+1. Unit testing: This testing is performed on individual units of the system, such as modules or subroutines. Unit testing can be automated using frameworks such as JUnit, NUnit, and pytest.
+2. Integration testing: This testing is performed on the entire system after all the units have been integrated. Integration testing can be automated using frameworks such as Jenkins and Travis CI.
+3. Functional testing: This testing is performed to ensure that the system functions as intended. Functional testing can be automated using frameworks such as Selenium and Appium.
+4. Performance testing: Testing is performed to evaluate the system's performance under different loads and conditions. Performance testing can be automated using tools such as Apache JMeter and Gatling.
+
+Summative testing is a final evaluation of the system after the patches have been deployed. It is used to evaluate the overall effectiveness of the patches. Sumitave testing can also identify any issues that may have been missed during the development and deployment phases. The summative test plan for OS patching includes the following procedures and tools:
+1. Acceptance testing: This testing is performed to ensure that the system meets the acceptance criteria set by the stakeholders. Acceptance testing can be automated using acceptance testing frameworks such as Cucumber and Specflow.
+2. Regression testing: This testing is performed to ensure that the system continues to function as intended after the patches have been applied. Regression testing can be automated using frameworks such as TestNG and JUnit.
+3. Security testing: This type of testing is performed to evaluate the system's security and identify any vulnerabilities that the patches may have introduced. Security testing can be automated using security testing tools such as Nessus, Metasploit, and Burp Suite.
+It is essential to have a robust testing process to ensure that the patches are effective and do not cause any issues with the existing systems. The goal is to allow Super Club to operate at peak performance with minimum downtime.
+
+In addition to the formative and summative test plans, it is also essential to have a plan for monitoring and tracking the patches once they have been deployed. Monitoring includes checking the systems for any issues that may arise and following the patches' performance over time. This information can be used to identify any issues that may have been missed during the testing phase and make any necessary adjustments to the patching process. It is essential to keep track of all the patches that have been applied and the systems that remain unpatched. This information can identify any systems that have not been patched and ensure that they are patched promptly. Additionally, it is essential to keep track of the vulnerabilities that have been addressed and the ones that have not been addressed to prioritize the patches and ensure that the most critical vulnerabilities are addressed first.
+
+Acceptance criteria and key performance indicators (KPIs) are essential components of the OS patching process, as they provide a way to evaluate the effectiveness of the patches and determine whether they meet Super Club's requirements. Below are the minimal acceptance criteria and key performance indicators for OS patching acceptance as they align with the formative and summative test plans.
+
+The minimal acceptance criteria for OS patching acceptance include the following:
+* All critical vulnerabilities identified during the assessment phase have been addressed.
+* The patches have been successfully installed on all targeted systems.
+* The patches have been tested and do not cause any issues with the existing systems.
+* The patches have been deployed according to the plan and within the specified timeframe.
+
+The key performance indicators (KPIs) for OS patching acceptance include the following:
+* Percentage of systems that have been patched successfully.
+* The number of vulnerabilities addressed by the patches.
+* The time it takes to complete the patching process.
+* The number of issues identified during the rollout.
+* The number of patches that were rejected or caused problems.
+* The overall impact of the patches on Super Club systems.
+
+These acceptance criteria and KPIs align with the formative and summative test plans as they provide a way to evaluate the effectiveness of the patches during the development and deployment phases and ensure that the patches meet Super Club's requirements. The formative test plan includes unit, integration, functional, and performance testing. In contrast, the summative test plan includes acceptance, regression, and security testing, which are essential to ensure that the patches are effective, do not cause any issues with the existing systems and meet the minimal acceptance criteria.
+
+## Justification of Test Cases and Scenarios
+
+Test cases provide a way to evaluate the functionality of the patches and ensure that they meet Super Club's requirements. They are conditions or steps used to test the system and determine whether it behaves as expected. This is important for OS security patching because it ensures that the patches address the identified vulnerabilities and do not cause any business outages.
+Scenarios provide a way to test the system under different conditions and loads. Test Cases are essential for OS security patching because it allows Super Club to validate that the vulnerabilities that should have been patched were patched with the last security update. It also helps to identify the potential impact of the patches on Super Club's systems and ensure that they do not cause any negative impact.
+Test cases and scenarios are essential in checking OS security patching because they provide a way to evaluate the system's security. This is important as security testing is an essential part of the patching process, and it ensures that the patches do not introduce any new vulnerabilities or weaknesses.
+Test cases and scenarios are also important in the context of OS security patching because they provide a way to evaluate the effectiveness of the patches in the long term. Testing is vital as it allows Super Club to identify any issues that may arise after the patches, fix the patches in production that has already been deployed, and make any necessary adjustments to the patching process to avoid similar issues.
+
+## Analyzing the Results of OS Security Patching
+
+Analyzing the results of OS security patching is an essential step in the process, as it allows Super Club to evaluate the effectiveness of the patches and identify any areas for improvement.
+Some of the performance metrics collected during the patching process include the number of systems that were successfully patched, the number of vulnerabilities that were addressed, and the time it took to complete the patching process. The number of servers that failed automated patching and the areas where the puppet code failed and had to be manually restarted, or the host had to be manually patched. These metrics will provide a quantitative measure of the effectiveness of the patches and allow Super Club to identify areas where the patching process could be improved.
+There are also quality metrics that are collected during the patching process. These metrics include the number of issues identified during the rollout, the number of rejected patches or updates that caused problems, and the overall impact of the patches on Super Club's systems. These metrics will measure the patching process's quality and allow Super Club to add tasks to the next sprint that corresponds with patch improvement.
+Super Club should also review the feedback collected from internal and external stakeholders. This feedback will be collected through surveys, interviews, and focus groups. It will provide a qualitative measure of the effectiveness of the patches and the satisfaction of stakeholders, including IT staff and end-users. This feedback will allow Super Club to identify any areas where the patching process could be improved and make any necessary adjustments to the project plan.
+Super Club should also review the results of the formative and summative testing that was conducted during the patching process. A review will allow Super Clun to identify any issues that may have been missed during the development and deployment phases and make any necessary adjustments to the patching process.
+
+
