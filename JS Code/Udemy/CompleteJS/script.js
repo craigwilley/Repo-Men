@@ -857,7 +857,7 @@ const measureKelvin = function () {
 };
 
 console.log(measureKelvin());
-*/
+
 
 // My Solution Challenge 1
 const testData1 = [17, 21, 23];
@@ -890,3 +890,5 @@ const printForcast2 = function (arr) {
 
 printForcast2(data1);
 printForcast2(data2);
+*/
+

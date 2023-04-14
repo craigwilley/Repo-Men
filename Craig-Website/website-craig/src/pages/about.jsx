@@ -67,45 +67,82 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                Every family has one, a kid with natural technical ability. It
+                also dooms that child always to fix every member of the family's
+                computer problems. That was me. I was that kid that saved every
+                penny of newspaper delivery money to buy a computer. But with
+                that computer, I made my first program. Sure, it was a simple
+                dice-rolling script, but it taught me the hidden power of
+                computers, and code was its controller.
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister’s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I’d be able to get to orbit.
+                Meet me, Craig, a 23-year-old full-stack engineer passionate
+                about technology, family, and the great outdoors. I live in Utah
+                with my wife and three kids, where I enjoy spending my free time
+                fishing in the mountains and biking through scenic places.
               </p>
               <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad’s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
+                My love for technology began early in life, leading me to pursue
+                a Bachelor's degree in software development. Later, I earned a
+                Master's degree in cybersecurity and information assurance,
+                which has helped me further advance my career.
               </p>
               <p>
-                Today, I’m the founder of Planetaria, where we’re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+                When I am not busy with work, I like to attend church and read
+                books by Brandon Sanderson. I also enjoy working in my yard and
+                having dinner with my friends.
+              </p>
+              <p>
+                My professional journey began as a warehouse employee at the
+                Bountiful Utah Costco. I split my time between work, family, and
+                school. I eventually completed my degree, completed an
+                internship for a web development company, and finally continued
+                my work for Costco moving to their corporate offices in Seattle,
+                WA. I am also currently the Technology Specialist for my church,
+                responsible for managing and maintaining the church's technology
+                infrastructure.
+              </p>
+              <p>
+                I work on the Platforms Team as a Dev Ope Release Manager for
+                Costco Wholesale in Seattle, WA. Although my team is primarily
+                remote, I work from my basement in Utah and occasionally fly
+                into the corporate offices to complete my tasks. My expertise in
+                full-stack engineering and cybersecurity has proven to be a
+                valuable asset to my team.
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
+              <SocialLink
+                href="https://twitter.com/Craig_Willey"
+                target="_blank"
+                icon={TwitterIcon}
+              >
                 Follow on Twitter
               </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+              <SocialLink
+                href="https://www.instagram.com/craigwilley/"
+                icon={InstagramIcon}
+                className="mt-4"
+                target="_blank"
+              >
                 Follow on Instagram
               </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+              <SocialLink
+                href="https://github.com/craigwilley"
+                icon={GitHubIcon}
+                className="mt-4"
+                target="_blank"
+              >
                 Follow on GitHub
               </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+              <SocialLink
+                href="https://www.linkedin.com/in/craigwilley/"
+                icon={LinkedInIcon}
+                className="mt-4"
+                target="_blank"
+              >
                 Follow on LinkedIn
               </SocialLink>
               <SocialLink
