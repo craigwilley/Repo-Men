@@ -1,0 +1,36 @@
+<head>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr><th>Title</th><td><?= rowData['Title'] ?></td></tr>
+    <tr><th>Outage Start</th><td><?= rowData['Outage_Start'] ?></td></tr>
+    <tr><th>Outage End</th><td><?= rowData['Outage_End'] ?></td></tr>
+    <tr><th>Duration</th><td><?= rowData['Duration'] ?></td></tr>
+    <tr><th>Bus. Impact During Change</th><td><?= rowData['Business_Impact'] ?></td></tr>
+    <tr><th>System ID's</th><td><?= rowData['System_IDs'] ?></td></tr>
+    <tr><th>Action Required</th><td><?= rowData['Action_Required'] ?></td></tr>
+    <tr><th>Monitoring Request</th><td><?= rowData['Monitoring_Request'] ?></td></tr>
+    <tr><th>RFC</th><td><?= rowData['RFC'] ?></td></tr>
+    <tr><th>Next Update</th><td><?= rowData['Next_Update'] ?></td></tr>
+    <tr><th>Environment</th><td><?= rowData['Environment'] ?></td></tr>
+    <tr><th>Calendar</th><td><?= rowData['Calendar'] ?></td></tr>
+    <tr><th>Email Contacts</th><td><?= rowData['Email_Contacts'] ?></td></tr>
+    <tr><th>Calendar Contacts</th><td><?= rowData['Calendar_Contacts'] ?></td></tr>
+</table>
+</body>
+</html>
