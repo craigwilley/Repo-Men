@@ -8,7 +8,7 @@ import logoStaticKit from '@/images/logos/facebook.svg'
 import logoTransistor from '@/images/logos/helio-stream.svg'
 import logoTuple from '@/images/logos/open-shuttle.svg'
 
-const sponsors = [
+const languages = [
     { name: 'Transistor', logo: logoTransistor },
     { name: 'Tuple', logo: logoTuple },
     { name: 'StaticKit', logo: logoStaticKit },
@@ -17,20 +17,20 @@ const sponsors = [
     { name: 'Statamic', logo: logoStatamic },
 ]
 
-export function Sponsors() {
+export function Languages() {
     return (
-        <section id="sponsors" aria-label="Sponsors" className="py-20 sm:py-32">
+        <section id="languages" aria-label="Languages" className="py-20 sm:py-32">
             <Container>
-                <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-blue-900 sm:text-5xl">
-                    Current sponsorships for our workshops and speakers.
+                <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-blue-900 sm:text-5xl dark:text-zinc-200">
+                    Some of the current programming languages that I use.
                 </h2>
                 <div className="mx-auto mt-20 grid max-w-max grid-cols-1 place-content-center gap-x-32 gap-y-12 sm:grid-cols-3 md:gap-x-16 lg:gap-x-32">
-                    {sponsors.map((sponsor) => (
+                    {languages.map((language) => (
                         <div
-                            key={sponsor.name}
+                            key={language.name}
                             className="flex items-center justify-center"
                         >
-                            <Image src={sponsor.logo} alt={sponsor.name} unoptimized />
+                            <Image src={language.logo} alt={language.name} unoptimized />
                         </div>
                     ))}
                 </div>

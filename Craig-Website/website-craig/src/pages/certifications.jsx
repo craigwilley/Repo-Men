@@ -6,7 +6,14 @@ import certCompTIA from '@/images/certifications/comptiaA+.png'
 import certAWSCCCP from '@/images/certifications/awscccp.png'
 import certMSAZ900 from '@/images/certifications/msaz900.png'
 import certSafe1 from '@/images/certifications/safepo.png'
-import certSecurityPlus from '@/images/certifications/security-plus.svg'
+import certAWSCQSA from '@/images/certifications/awscqsa.png'
+import asisc2 from '@/images/certifications/asisc2.png'
+import dcnaIBM from '@/images/certifications/dcnaIBM.png'
+import safeDevO from '@/images/certifications/safeDevO.png'
+import safePrac from '@/images/certifications/safePrac.png'
+import IBMcc from '@/images/certifications/IBMcc.png'
+import compProj from '@/images/certifications/compProj.png'
+import safeSM from '@/images/certifications/safeSM.png'
 
 const certifications = [
     {
@@ -15,6 +22,13 @@ const certifications = [
             'An entry-level certification for IT professionals covering mobile devices, networking, hardware, virtualization, and cloud computing.',
         link: { href: 'https://www.credly.com/badges/99aff24a-8889-43c9-a24e-78facf2c1d4b/public_url', label: 'CompTIA - Credly' },
         logo: certCompTIA,
+    },
+    {
+        name: 'AWS Cloud Quest: Solutions Architect',
+        description:
+            'A certification covering building secure, fault tolerant and highly available AWS solutions.',
+        link: { href: 'https://www.credly.com/badges/f9f2006d-e2bb-4367-a062-a706d6b890df/public_url', label: 'AWS - Credly' },
+        logo: certAWSCQSA,
     },
     {
         name: 'AWS Cloud Quest: Cloud Practitioner',
@@ -41,49 +55,49 @@ const certifications = [
         name: 'Associate of (ISC)²',
         description:
             'A certification for IT security professionals, covering threats, attacks, risk management, and cryptography.',
-        link: { href: 'https://www.comptia.org/certifications/security', label: 'comptia.org' },
-        logo: certSecurityPlus,
+        link: { href: 'https://www.credly.com/badges/dc6b7ab8-b632-4df4-8e33-7040817ca509/public_url', label: 'ISC2 - Credly' },
+        logo: asisc2,
     },
     {
         name: 'Developing Cloud Native Applications',
         description:
-            'A certification for IT security professionals, covering threats, attacks, risk management, and cryptography.',
-        link: { href: 'https://www.comptia.org/certifications/security', label: 'comptia.org' },
-        logo: certSecurityPlus,
+            'Certification for defining and describing the significance of hybrid cloud infrastructures and two critical areas of cloud thinking: modernization and continuous integration/continuous delivery.',
+        link: { href: 'https://www.credly.com/badges/03344528-bfee-4043-90cf-c5904ced4118/public_url', label: 'IBM - Credly' },
+        logo: dcnaIBM,
     },
     {
         name: 'SAFe 5 DevOps Practitioner',
         description:
-            'A certification for IT security professionals, covering threats, attacks, risk management, and cryptography.',
-        link: { href: 'https://www.comptia.org/certifications/security', label: 'comptia.org' },
-        logo: certSecurityPlus,
+            'A certification for Dev Ops Continuous Exploration, Continuous Integration, Continuous Deployment, Release-on-Demand, continuous testing, continuous security, and building a culture of shared responsibility',
+        link: { href: 'https://www.credly.com/badges/356b9e02-b3cf-4387-967e-d949bb5e5c0f/public_url', label: 'SAFe - Credly' },
+        logo: safeDevO,
     },
     {
         name: 'SAFe 5 Practitioner',
         description:
-            'A certification for IT security professionals, covering threats, attacks, risk management, and cryptography.',
-        link: { href: 'https://www.comptia.org/certifications/security', label: 'comptia.org' },
-        logo: certSecurityPlus,
+            'A Certified SAFe® 5 Practitioner (SP) is a SAFe team member professional responsible for using Scrum, Kanban, and XP in a SAFe environment.',
+        link: { href: 'https://www.credly.com/badges/bcd332b7-b891-4f30-a602-1c421470fb9f/public_url', label: 'SAFe - Credly' },
+        logo: safePrac,
     },
     {
         name: 'Introduction to Cloud Computing',
         description:
-            'A certification for IT security professionals, covering threats, attacks, risk management, and cryptography.',
-        link: { href: 'https://www.comptia.org/certifications/security', label: 'comptia.org' },
-        logo: certSecurityPlus,
+            'Being able to describe cloud platforms and models including IaaS, PaaS, SaaS, and public, private and hybrid multiclouds. Familiar with essentials of cloud applications and terms like Virtualization, VMs, Containers, Object Storage, Microservices, Serverless, Cloud Native, and DevOps',
+        link: { href: 'https://www.credly.com/badges/194c3086-24a6-4573-9025-379c8f34ed7a/public_url', label: 'IBM - Credly' },
+        logo: IBMcc,
     },
     {
         name: 'SAFe 5 Scrum Master',
         description:
-            'A certification for IT security professionals, covering threats, attacks, risk management, and cryptography.',
-        link: { href: 'https://www.comptia.org/certifications/security', label: 'comptia.org' },
-        logo: certSecurityPlus,
+            'Key areas of competency include using Scrum and Kanban to facilitate team events, supporting program execution, and coaching Agile teams.',
+        link: { href: 'https://www.credly.com/badges/537d98a8-3494-4c23-b172-92bdb75b836e/public_url', label: 'SAFe - Credly' },
+        logo: safeSM,
     },    {
         name: 'CompTIA Project+ Certification',
         description:
-            'A certification for IT security professionals, covering threats, attacks, risk management, and cryptography.',
-        link: { href: 'https://www.comptia.org/certifications/security', label: 'comptia.org' },
-        logo: certSecurityPlus,
+            'Certified knowledge and skills required to manage a project life cycle, ensure proper communication, manage resources and stakeholders and maintain project documentation.',
+        link: { href: 'https://www.credly.com/badges/c77b00d1-c7b2-4c3c-9cb1-44c02bbbbe61/public_url', label: 'comptia.org' },
+        logo: compProj,
     },
 ]
 

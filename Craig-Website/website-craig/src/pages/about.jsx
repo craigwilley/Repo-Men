@@ -61,14 +61,14 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Hello, I'm Craig. <br />
+              Hello, I&apos;m Craig. <br />
               Trying to stick the stuff in my head into code. <br />I am always
               trying to learn the next big thing!
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 Every family has one, a kid with natural technical ability. It
-                also dooms that child always to fix every member of the family's
+                also dooms that child always to fix every member of the family&apos;s
                 computer problems. That was me. I was that kid that saved every
                 penny of newspaper delivery money to buy a computer. But with
                 that computer, I made my first program. Sure, it was a simple
@@ -83,8 +83,8 @@ export default function About() {
               </p>
               <p>
                 My love for technology began early in life, leading me to pursue
-                a Bachelor's degree in software development. Later, I earned a
-                Master's degree in cybersecurity and information assurance,
+                a Bachelor&apos;s degree in software development. Later, I earned a
+                Master&apos;s degree in cybersecurity and information assurance,
                 which has helped me further advance my career.
               </p>
               <p>
@@ -99,7 +99,7 @@ export default function About() {
                 internship for a web development company, and finally continued
                 my work for Costco moving to their corporate offices in Seattle,
                 WA. I am also currently the Technology Specialist for my church,
-                responsible for managing and maintaining the church's technology
+                responsible for managing and maintaining the church&apos;s technology
                 infrastructure.
               </p>
               <p>
